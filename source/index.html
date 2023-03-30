@@ -7,6 +7,9 @@
   <body class="page__body">
     <header class="header">
       <nav class="menu">
+        <a href="header__logo">
+            <img class="header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+        </a>
         <button class="menu__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
@@ -18,12 +21,7 @@
             <a class="site-list__link">Вязание на заказ</a>
           </li>
         </ul>
-        <a href="header__logo">
-          <picture>
-            <img src="" alt="">
-          </picture>
-        </a>
-        <div class="menu__list user-list">
+        <ul class="menu__list user-list">
           <li class="user-list__item">
             <a class="user-list__link">
               <span class="visually-hidden">Поиск</span>
@@ -35,7 +33,7 @@
               <span class="user-list__link-basket">Корзина: пока пуста</span>
             </a>
           </li>
-        </div>
+        </ul>
         <p class="header__additional-text">Бесплатная доставка по России</p>
         <ul class="header__additional-list">
           <li class="header__additional-item">
@@ -49,8 +47,8 @@
     </header>
     <main class="main-continer">
       <h1 class="visually-hidden">Мишка магазин вязаных корзинок!</h1>
-      <div class="hero__wrapper">
       <section class="hero">
+        <div class="hero__wrapper">
         <h2 class="hero__title">Милые штуки ручной работы для дома</h2>
         <ul class="hero__list">
           <li class="hero__item">
@@ -65,6 +63,31 @@
           </li>
         </ul>
       </div>
+      </section>
+      <section class="product">
+        <div class="product__wrapper">
+          <h2 class="visually-hidden">Рекомендуемые вязаные корзины</h2>
+          <p class="product__legend">Товар недели</p>
+          <h3 class="product__title">Вязаные корзинки</h3>
+          <p class="product__description">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках и трёх размерах.</p>
+          <img class="product__image" src="" alt="Вязаная коризна">
+          <dl class="product__list">
+            <div class="product__item">
+              <dt class="product__item-parameter">Цвет</dt>
+              <dd class="product__item-text">тифанни/серый</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-parameter">Диаметр</dt>
+              <dd class="product__item-text">25см</dd>
+            </div>
+            <div class="product__item">
+              <dt class="product__item-parameter">Высота</dt>
+              <dd class="product__item-text">15см</dd>
+            </div>
+            <b class="product__price">Цена: 990 руб.</b>
+            <a class="product__ buy button" href="">Заказать</a>
+          </dl>
+        </div>
       </section>
     </main>
   </body>
