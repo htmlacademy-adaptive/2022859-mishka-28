@@ -157,17 +157,20 @@
       <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">Контакты</h2>
-          <address class="contacts__address-wrapper">
-            <p class="contacts__address-item">
-              <b class="contacts__address-item__title">e-mail:</b>
-              <span class="contacts__address-item__email-text">info@mimimishkashop.ru</span>
-            </p>
-            <p class="contacts__address-item">
-              <b class="contacts__address-item__title">адрес:</b>
-              <span class="contacts__address-item__email-text">г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</span>
-            </p>
+          <address class="contacts__address">
+            <dl class="contacts__list">
+              <dt class="contacts__termin">e-mail:</dt>
+              <dd class="contacts__data">
+                <a class="contacts__link">info@mimimishkashop.ru</a>
+              </dd>
+            </dl>
+              <dt class="contacts__address-item__title">адрес:</dt>
+              <dd class="contacts__address-item__email-text">г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</dd>
           </address>
           <a class="contacts-write button" href="">Напишите нам</a>
+          <div class="contacts__map">
+            <img src="" alt="Карта">
+          </div>
         </div>
       </section>
     </main>
@@ -177,7 +180,8 @@
 
       <!-- Лого в подвале -->
       <div class="footer__wrapper">
-        <a class="footer__logo" href="">
+        <a class="footer__logo" href="#">
+          <span class="visually-hidden">На главную</span>
           <img src="" alt="">
         </a>
       </div>
@@ -206,7 +210,9 @@
       <!-- Ссылка на академению -->
       <div class="footer__copyright copyright">
         <b class="copyright__text">Разработано:</b>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
       </div>
     </footer>
   </body>
