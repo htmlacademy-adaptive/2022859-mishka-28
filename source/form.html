@@ -138,7 +138,7 @@
                 </li>
               </ul>
           </fieldset>
-          <div class="field__group">
+          <div class="form__field-group">
             <legend class="form__group-heading">ФИО</legend>
             <p class="form__item">
               <label class="form__title" id="name" name="name">Имя</label>
@@ -153,10 +153,69 @@
               <input class="form__input" type="text" id="patronymic" placeholder="Отчество, если желаете">
             </p>
           </div>
-          <div class="field__group"></div>
+          <div class="form__field-group">
+            <p class="form__item">
+              <label class="form__group-heading" id="phone">Тел</label>
+              <input class="form__input" type="text" name="phone" id="phone">
+            </p>
+            <p class="form__item">
+              <label class="form__group-heading" id="email">e-mail</label>
+              <input class="form__input" type="text" name="email" id="email">
+            </p>
+          </div>
+          <div class="form__field-group">
+            <textarea class="form__textarea" name="" id="" cols="30" rows="10"></textarea>
+          </div>
+          <button class="form__button button">Отправить заказа</button>
+          <p class="form__legend">
+            <small>
+              * — приведённые данные ложь
+            </small>
+          </p>
         </form>
       </div>
     </section>
   </main>
+
+      <!-- Подвал -->
+      <footer class="footer">
+
+        <!-- Лого в подвале -->
+        <div class="footer__wrapper">
+          <a class="footer__logo" href="#">
+            <span class="visually-hidden">На главную</span>
+            <img src="" alt="">
+          </a>
+        </div>
+
+        <!-- Социальные сети -->
+        <div class="footer__social social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" rel="nofollow noopener">
+                <span class="visually-hidden">Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" rel="nofollow noopener">
+                <span class="visually-hidden">Youtube</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" rel="nofollow noopener">
+                <span class="visually-hidden">Телеграм</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Ссылка на академению -->
+        <div class="footer__copyright copyright">
+          <b class="copyright__text">Разработано:</b>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
+        </div>
+      </footer>
 </body>
 </html>
