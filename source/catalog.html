@@ -8,5 +8,104 @@
 </head>
 <body class="page__body">
 
+  <!-- Шапка -->
+  <header class="header">
+    <!-- Основное меню -->
+    <nav class="menu">
+      <a href="header__logo">
+          <img class="header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+      </a>
+      <button class="menu__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+      <ul class="menu__list site-list">
+        <li class="site-list__item">
+          <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+        </li>
+        <li class="site-list__item">
+          <a class="site-list__link" href="index.html">Вязание на заказ</a>
+        </li>
+      </ul>
+      <ul class="menu__list user-list">
+        <li class="user-list__item">
+          <a class="user-list__link">
+            <span class="visually-hidden">Поиск</span>
+          </a>
+        </li>
+        <li class="user-list__item">
+          <a class="user-list__link">
+            <span class="visually-hidden">Корзина</span>
+            <span class="user-list__link-basket">Корзина: пока пуста</span>
+          </a>
+        </li>
+      </ul>
+      <p class="header__additional-text">Бесплатная доставка по России</p>
+
+      <!-- Дополнительное меню -->
+      <ul class="header__additional-list">
+        <li class="header__additional-item">
+          <a class="header__additional-link">Новые поступления</a>
+        </li>
+        <li class="header__additional-item">
+          <a class="header__additional-link">Распродажа</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Основной контент -->
+  <main class="main-continer">
+    <section class="hero">
+      <div class="hero__wrapper">
+      <h1 class="hero__title">Каталог товаров</h1>
+    </div>
+    </section>
+
+    <!-- Каталог карточек -->
+    <section class="product-cards">
+      <h2 class="visually-hidden">Карточки товаров</h2>
+      <div class="product-cards__wrapper">
+        <ul class="product-cards__list">
+          <li class="product-card__item">
+            <h3 class="product-card__title">Зайчик-попрыгайчик</h3>
+            <a class="product-card__images-link" href="#">
+              <img src="" alt="Зайчик-попрыгайчик">
+            </a>
+            <p class="product-card__description">Рост 30 см, вес 200 г</p>
+            <b class="product-card__price">1 200 руб.</b>
+            <a class="product-card__link" href="">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+          </li>
+
+          <!-- Вторая карточка -->
+          <li class="product-card__item">
+            <h3 class="product-card__title">Корзинка для белья</h3>
+            <a class="product-card__images-link" href="#">
+              <img src="" alt="Корзинка для белья">
+            </a>
+            <p class="product-card__description">Диаметр 15 см, высота 10 см</p>
+            <b class="product-card__price">690 руб.</b>
+            <a class="product-card__link" href="">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+          </li>
+
+          <!-- Третья карточка -->
+          <li class="product-card__item">
+            <h3 class="product-card__title">Большая корзинка<br>для игрушек</h3>
+            <a class="product-card__images-link" href="#">
+              <img src="" alt="Большая корзинка для игрушек">
+            </a>
+            <p class="product-card__description">Диаметр 30 см, высота 30 см</p>
+            <b class="product-card__price">1 500 руб.</b>
+            <a class="product-card__link" href="">
+              <span class="visually-hidden">В корзину</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
