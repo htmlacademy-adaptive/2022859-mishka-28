@@ -9,9 +9,9 @@
     <!-- Шапка -->
     <header class="header">
       <!-- Основное меню -->
-      <nav class="header-menu menu">
+      <nav class="header__menu menu">
         <a class="header__logo" aria-label="Логотип">
-            <img class="header__logo-icon" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+            <img class="header__logo-icon" src="img/mishka-logo-mobile.svg" width="86" height="35" decoding="async" alt="Логотип магазина Мишка">
         </a>
         <button class="menu__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
@@ -61,12 +61,12 @@
         <ul class="hero__list">
           <li class="hero__item">
             <a class="hero__link" href="#">
-              <span class="hero__lenk-text">Предметы интерьера</span>
+              <span class="hero__link-text">Предметы интерьера</span>
             </a>
           </li>
           <li class="hero__item">
             <a class="hero__link" href="#">
-              <span class="hero__lenk-text">Детские игрушки</span>
+              <span class="hero__link-text">Детские игрушки</span>
             </a>
           </li>
         </ul>
@@ -74,28 +74,28 @@
       </section>
 
       <!-- Товар -->
-      <section class="product">
-        <div class="product__wrapper">
+      <section class="promo">
+        <div class="promo__wrapper">
           <h2 class="visually-hidden">Рекомендуемые вязаные корзины</h2>
-          <p class="product__legend">Товар недели</p>
-          <h3 class="product__title">Вязаные корзинки</h3>
-          <p class="product__description">Экологически чистая пряжа,<br>ручная работа. Доступны в шести<br>расцветках и трёх размерах.</p>
-          <img class="product__image" src="../source/img/knitted-basket-mobile.jpg" width="260" height="315" alt="Вязаная коризна">
-          <dl class="product__list">
-            <div class="product__item">
-              <dt class="product__item-parameter">Цвет</dt>
-              <dd class="product__item-text">тифанни/серый</dd>
+          <p class="promo__legend">Товар недели</p>
+          <h3 class="promo__title">Вязаные корзинки</h3>
+          <p class="promo__description">Экологически чистая пряжа,<br>ручная работа. Доступны в шести<br>расцветках и трёх размерах.</p>
+          <img class="promo__image" src="../source/img/knitted-basket-mobile.jpg" width="260" height="315" decoding="async" alt="Вязаная коризна">
+          <dl class="promo__list">
+            <div class="promo__item">
+              <dt class="promo__item-parameter">Цвет</dt>
+              <dd class="promo__item-text">тифанни/серый</dd>
             </div>
-            <div class="product__item">
-              <dt class="product__item-parameter">Диаметр</dt>
-              <dd class="product__item-text">25см</dd>
+            <div class="promo__item">
+              <dt class="promo__item-parameter">Диаметр</dt>
+              <dd class="promo__item-text">25см</dd>
             </div>
-            <div class="product__item">
-              <dt class="product__item-parameter">Высота</dt>
-              <dd class="product__item-text">15см</dd>
+            <div class="promo__item">
+              <dt class="promo__item-parameter">Высота</dt>
+              <dd class="promo__item-text">15см</dd>
             </div>
-            <b class="product__price">Цена: 990 руб.</b>
-            <a class="product__ buy button" href="">Заказать</a>
+            <b class="promo__price">Цена: 990 руб.</b>
+            <a class="promo__buy button" href="">Заказать</a>
           </dl>
         </div>
       </section>
@@ -106,22 +106,22 @@
           <h2 class="advantages__title">Коротко о нас:</h2>
           <ul class="advantages__list">
             <li class="advantages__item advantages__item--ecology">
-              <p class="advantages__description">Экологически<br>чистые материалы</p>
+              <span class="advantages__description">Экологически<br>чистые материалы</span>
             </li>
             <li class="advantages__item advantages__item--love">
-              <p class="advantages__description">Связано вручную<br>с любовью и умилением</p>
+              <span class="advantages__description">Связано вручную<br>с любовью и умилением</span>
             </li>
             <li class="advantages__item advantages__item--price">
-              <p class="advantages__description">Скандинавский стиль<br>по российской цене</p>
+              <span class="advantages__description">Скандинавский стиль<br>по российской цене</span>
             </li>
             <li class="advantages__item advantages__item--domestic">
-              <p class="advantages__description">Поддержка отечественного производителя</p>
+              <span class="advantages__description">Поддержка отечественного производителя</span>
             </li>
             <li class="advantages__item advantages__item--like">
-              <p class="advantages__description">Увеличивает лайки<br>на фотографиях</p>
+              <span class="advantages__description">Увеличивает лайки<br>на фотографиях</span>
             </li>
             <li class="advantages__item advantages__item--present">
-              <p class="advantages__description">Поставляется<br>в подарочной упаковке</p>
+              <span class="advantages__description">Поставляется<br>в подарочной упаковке</span>
             </li>
           </ul>
         </div>
@@ -131,7 +131,7 @@
       <section class="reviews">
         <div class="reviews__wrapper slider">
           <h2 class="reviews__title">Отзывы</h2>
-          <a class="reviews-write button" href="">Написать</a>
+          <a class="reviews__write button" href="">Написать</a>
           <div class="reviews__list slider__list">
             <blockquote class="reviews__item slider__item">
               <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
@@ -160,15 +160,15 @@
             <dl class="contacts__list">
               <dt class="contacts__termin">e-mail:</dt>
               <dd class="contacts__data">
-                <a class="contacts__link">info@mimimishkashop.ru</a>
+                <a class="contacts__link" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
               </dd>
             </dl>
               <dt class="contacts__address-item__title">адрес:</dt>
               <dd class="contacts__address-item__email-text">г. Санкт-Петербург<br>ул. Большая Конюшенная<br>д. 19/8, офис 101</dd>
           </address>
-          <a class="contacts-write button" href="#">Напишите нам</a>
+          <a class="contacts__write button" href="#">Напишите нам</a>
           <div class="contacts__map">
-            <img src="" alt="Карта">
+            <img src="" alt="Карта" decoding="async">
           </div>
         </div>
       </section>
@@ -181,7 +181,7 @@
       <div class="footer__wrapper">
         <a class="footer__logo" href="#">
           <span class="visually-hidden">На главную</span>
-          <img src="" alt="">
+          <img src="" alt="" decoding="async">
         </a>
       </div>
 

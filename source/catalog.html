@@ -11,9 +11,9 @@
   <!-- Шапка -->
   <header class="header">
     <!-- Основное меню -->
-    <nav class="header-menu menu">
+    <nav class="header__menu menu">
       <a class="header__logo" href="index.html" aria-label="Логотип">
-          <img class="header__logo-icon" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Логотип магазина Мишка">
+          <img class="header__logo-icon" src="img/mishka-logo-mobile.svg" width="86" height="35" decoding="async" alt="Логотип магазина Мишка">
       </a>
       <button class="menu__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
@@ -54,52 +54,50 @@
   </header>
 
   <!-- Основной контент -->
-  <main class="main-continer">
-    <section class="hero">
+  <main class="main-continer hero">
       <div class="hero__wrapper">
       <h1 class="hero__title">Каталог товаров</h1>
-    </div>
-    </section>
+      </div>
 
     <!-- Каталог карточек -->
-    <section class="product-cards">
+    <section class="product">
       <h2 class="visually-hidden">Карточки товаров</h2>
-      <div class="product-cards__wrapper">
-        <ul class="product-cards__list product-card">
-          <li class="product-card__item">
-            <h3 class="product-card__title">Зайчик-попрыгайчик</h3>
-            <a class="product-card__images-link" href="#">
-              <img src="../source/img/photo-1-mobile.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
+      <div class="product__wrapper">
+        <ul class="product__list">
+          <li class="product__item card">
+            <h3 class="card__title">Зайчик-попрыгайчик</h3>
+            <a class="card__images-link" href="#">
+              <img src="../source/img/photo-1-mobile.jpg" width="260" height="195" decoding="async" alt="Зайчик-попрыгайчик">
             </a>
-            <p class="product-card__description">Рост 30 см, вес 200 г</p>
-            <b class="product-card__price">1 200 руб.</b>
-            <a class="product-card__link" href="">
+            <p class="card__description">Рост 30 см, вес 200 г</p>
+            <b class="card__price">1 200 руб.</b>
+            <a class="card__link" href="">
               <span class="visually-hidden">В корзину</span>
             </a>
           </li>
 
           <!-- Вторая карточка -->
-          <li class="product-card__item">
-            <h3 class="product-card__title">Корзинка для белья</h3>
-            <a class="product-card__images-link" href="#">
-              <img src="../source/img/photo-2-mobile.jpg" width="260" height="195" alt="Корзинка для белья">
+          <li class="product__item card">
+            <h3 class="card__title">Корзинка для белья</h3>
+            <a class="card__images-link" href="#">
+              <img src="../source/img/photo-2-mobile.jpg" width="260" height="195" decoding="async" alt="Корзинка для белья">
             </a>
-            <p class="product-card__description">Диаметр 15 см, высота 10 см</p>
-            <b class="product-card__price">690 руб.</b>
-            <a class="product-card__link" href="">
+            <p class="card__description">Диаметр 15 см, высота 10 см</p>
+            <b class="card__price">690 руб.</b>
+            <a class="card__link" href="">
               <span class="visually-hidden">В корзину</span>
             </a>
           </li>
 
           <!-- Третья карточка -->
-          <li class="product-card__item">
-            <h3 class="product-card__title">Большая корзинка<br>для игрушек</h3>
-            <a class="product-card__images-link" href="#">
-              <img src="../source/img/photo-3-mobile.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
+          <li class="product__item card">
+            <h3 class="card__title">Большая корзинка<br>для игрушек</h3>
+            <a class="card__images-link" href="#">
+              <img src="../source/img/photo-3-mobile.jpg" width="260" height="195" decoding="async" alt="Большая корзинка для игрушек">
             </a>
-            <p class="product-card__description">Диаметр 30 см, высота 30 см</p>
-            <b class="product-card__price">1 500 руб.</b>
-            <a class="product-card__link" href="">
+            <p class="card__description">Диаметр 30 см, высота 30 см</p>
+            <b class="card__price">1 500 руб.</b>
+            <a class="card__link" href="">
               <span class="visually-hidden">В корзину</span>
             </a>
           </li>
@@ -114,7 +112,7 @@
         <div class="production__video video">
           <a class="video__link" href="#">
             <picture>
-              <img src="../source/img/video-mobile.jpg" width="260" height="160" alt="Процесс производства">
+              <img src="../source/img/video-mobile.jpg" width="260" height="160" decoding="async" alt="Процесс производства">
             </picture>
           </a>
           <button class="video__button">
