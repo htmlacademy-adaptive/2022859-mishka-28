@@ -1,1 +1,12 @@
 // Начните писать стили здесь
+
+/* Global */
+
+@import "./variables.scss";
+@import "./fonts.scss";
+@import "./box-model.scss";
+
+/* blocks */
+
+@import "./blocks/page.scss";
+@import "./blocks/hero.scss"
