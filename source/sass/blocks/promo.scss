@@ -1,0 +1,54 @@
+/* Promo */
+
+.promo__legend {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: $basic-green;
+  margin: 0;
+}
+
+
+/* Description */
+.promo__description {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  margin: 0;
+  color: $basic-dark-gray;
+}
+
+/* List */
+
+.promo__list {
+  margin: 0;
+}
+
+/* Item */
+
+.promo__item {
+  color: $basic-dark-gray;
+}
+
+.promo__item dt,
+.promo__item dd {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0;
+}
+
+/* Price */
+
+.promo__price {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $basic-dark-gray;
+}
+
+/* Button */
+
+.promo__buy {
+  padding: 16px 70px;
+}

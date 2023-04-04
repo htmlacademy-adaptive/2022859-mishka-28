@@ -17,12 +17,12 @@
         <button class="menu__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="menu__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="site-list__item">
-            <a class="site-list__link" href="form.html">Вязание на заказ</a>
+          <li class="menu__item">
+            <a class="menu__link" href="form.html">Вязание на заказ</a>
           </li>
         </ul>
         <ul class="menu__list user-list">
@@ -56,9 +56,9 @@
     <main class="main-continer">
 
       <!-- Главный экран -->
-      <section class="hero">
+      <section class="hero hero--index">
         <div class="hero__wrapper wrapper">
-        <h1 class="hero__title title">Милые штуки ручной<br>работы для дома</h1>
+        <h2 class="hero__title title">Милые штуки ручной<br>работы для дома</h2>
         <ul class="hero__list">
           <li class="hero__item">
             <a class="hero__link" href="#">
@@ -78,22 +78,22 @@
       <section class="promo">
         <div class="promo__wrapper wrapper">
           <h2 class="visually-hidden">Рекомендуемые вязаные корзины</h2>
-          <p class="promo__legend">Товар недели</p>
           <h3 class="promo__title title">Вязаные корзинки</h3>
+          <p class="promo__legend">Товар недели</p>
           <p class="promo__description">Экологически чистая пряжа,<br>ручная работа. Доступны в шести<br>расцветках и трёх размерах.</p>
           <img class="promo__image" src="../source/img/knitted-basket-mobile.jpg" width="260" height="315" decoding="async" alt="Вязаная коризна">
           <dl class="promo__list">
             <div class="promo__item">
-              <dt class="promo__item-parameter">Цвет</dt>
-              <dd class="promo__item-text">тифанни/серый</dd>
+              <dt>Цвет</dt>
+              <dd>тифанни/серый</dd>
             </div>
             <div class="promo__item">
-              <dt class="promo__item-parameter">Диаметр</dt>
-              <dd class="promo__item-text">25см</dd>
+              <dt>Диаметр</dt>
+              <dd>25см</dd>
             </div>
             <div class="promo__item">
-              <dt class="promo__item-parameter">Высота</dt>
-              <dd class="promo__item-text">15см</dd>
+              <dt>Высота</dt>
+              <dd>15см</dd>
             </div>
             <b class="promo__price">Цена: 990 руб.</b>
             <a class="promo__buy button" href="">Заказать</a>
@@ -137,7 +137,7 @@
             <blockquote class="reviews__item slider__item">
               <p class="reviews__text">Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
                 <br>у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,<br>и мои фотографии сразу стали более стильными, а также набирают больше лайков!</p>
-              <cite class="reviews__author-name">Анастасия Красильникова<br>@misssssiskras</cite>
+              <cite class="reviews__author-name">Анастасия Красильникова<br><a class="reviews__author-name reviews__author-name--link">@misssssiskras</a></cite>
             </blockquote>
             <blockquote class="reviews__item slider__item">
               <p class="reviews__text">Я сестра молодой мамы, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои<br>фотографии сразу стали более стильными, а также набирают больше лайков!</p>
@@ -148,8 +148,12 @@
               <cite class="reviews__author-name">Елена  Красильникова<br>@misssssiskras3</cite>
             </blockquote>
           </div>
-          <button class="reviews-prev" type="button">Предыдущий слайд</button>
-          <button class="reviews-next" type="button">Следующий слайд</button>
+          <button class="reviews-prev" type="button">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="reviews-next" type="button">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
         </div>
       </section>
 
