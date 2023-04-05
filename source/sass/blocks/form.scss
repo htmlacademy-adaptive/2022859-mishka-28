@@ -1,8 +1,8 @@
 /* Form */
 
-// .form {
-
-// }
+.form {
+  padding-bottom: 55px;
+}
 
 /* Group */
 
@@ -36,7 +36,6 @@
   line-height: 16px;
   text-transform: uppercase;
   color: $basic-green;
-  margin-bottom: 30px;
 }
 
 /* List */
@@ -64,6 +63,15 @@
   color: inherit;
 }
 
+.form__legend {
+  margin: 0;
+  margin-top: 17px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic-dark-gray;
+}
+
 /* Title */
 
 .form__title {
@@ -71,6 +79,7 @@
   font-size: 17px;
   line-height: 18px;
   margin: 0;
+  margin-bottom: 1px;
 }
 
 
@@ -78,4 +87,16 @@
 
 .form__input {
   border: none;
+}
+
+
+// .form__textarea {
+
+// }
+
+/* Button */
+
+.form__button {
+  margin-top: 30px;
+  padding: 18px 38px;
 }
