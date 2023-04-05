@@ -1,0 +1,48 @@
+/* Contacts */
+
+.contacts {
+  padding-bottom: 39px;
+}
+
+/* Title */
+
+.contacts__title {
+  margin: 0;
+}
+
+/* Address */
+
+.contacts__address {
+  font-style: normal;
+  margin-bottom: 62px;
+}
+
+/* List */
+
+.contacts__address dt,
+.contacts__address dd {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px;
+  color: $basic-dark-gray;
+  margin: 0;
+}
+
+/* Link */
+
+.contacts__link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Button */
+
+.contacts__write {
+  padding: 16px 38px;
+}
+
+/* Images */
+
+.contacts__map {
+  margin-bottom: 42px;
+}

@@ -1,5 +1,21 @@
 /* Hero */
 
+.hero {
+  padding-bottom: 31px;
+  background-color: $basic-gray;
+}
+
+.hero--index {
+
+}
+
+/* Title */
+
+.hero__title {
+  margin: 0;
+  margin-bottom: 120px;
+}
+
 /* List */
 
 .hero__list {
