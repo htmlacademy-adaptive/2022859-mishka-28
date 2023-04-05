@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Форма</title>
 </head>
 <body class="page__body">
@@ -52,9 +53,11 @@
       </ul>
     </nav>
   </header>
-  <main class="main-continer hero">
+  <main class="main-continer">
+    <section class="hero">
       <div class="hero__wrapper wrapper">
-      <h1 class="hero__title">Вязание на заказ</h1>
+        <h1 class="hero-form__title">Вязание на заказ</h1>
+    </section>
     </div>
 
     <!-- Форма для заказа -->
@@ -70,13 +73,13 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__radiobox">
-                  <input type="radio" name="type" value="interior-accessories">
+                  <input class="control" type="radio" name="type" value="interior-accessories">
                   <span class="form__text">Аксесуары для интерьера</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__radiobox">
-                  <input type="radio" name="type" value="children's-toy">
+                  <input class="control" type="radio" name="type" value="children's-toy">
                   <span class="form__text">Детская игрушка</span>
                 </label>
               </li>
@@ -126,26 +129,26 @@
               </ul>
           </fieldset>
           <div class="form__field-group">
-            <span class="form__group-heading">ФИО</span>
-            <p class="form__item">
+            <p class="form__group-heading">фио</p>
+            <p class="form__field">
               <label class="form__title" for="name">Имя</label>
               <input class="form__input" type="text" id="name" placeholder="Введите ваше имя*">
             </p>
-            <p class="form__item">
+            <p class="form__field">
               <label class="form__title" for="surname">Фамилия:</label>
               <input class="form__input" type="text" id="surname" placeholder="Укажите фамилию*">
             </p>
-            <p class="form__item">
+            <p class="form__field">
               <label class="form__title" for="patronymic">Отчество:</label>
               <input class="form__input" type="text" id="patronymic" placeholder="Отчество, если желаете">
             </p>
           </div>
           <div class="form__field-group">
-            <p class="form__item">
+            <p class="form__field">
               <label class="form__group-heading" for="phone">Тел</label>
               <input class="form__input" type="tel" name="phone" id="phone">
             </p>
-            <p class="form__item">
+            <p class="form__field">
               <label class="form__group-heading" for="email">e-mail</label>
               <input class="form__input" type="email" name="email" id="email">
             </p>
