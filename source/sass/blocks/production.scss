@@ -1,0 +1,32 @@
+/* Producion */
+
+.production {
+  padding-bottom: 58px;
+}
+
+// .production__wrapper {
+
+// }
+
+.production__item {
+  border: 1px solid $basic-semi-gray;
+}
+
+/* Title */
+
+.production__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $basic-black;
+}
+
+/* Description */
+
+.production__description {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+  color: $basic-dark-gray;
+}

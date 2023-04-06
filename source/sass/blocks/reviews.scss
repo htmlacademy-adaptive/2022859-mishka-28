@@ -1,0 +1,41 @@
+/* Reviews */
+
+.reviews {
+  padding-bottom: 89px;
+}
+
+/* Title */
+
+.reviews__title {
+  margin: 0;
+  margin-bottom: 14px;
+}
+
+/* Item */
+
+.reviews__item {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+/* Text */
+
+.reviews__text {
+  margin: 0;
+  margin-bottom: 31px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 30px;
+  color: $basic-dark-gray;
+}
+
+.reviews__author-name {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $basic-black;
+}
+
+.reviews__author-name--link {
+  color: $basic-dark-gray;
+}

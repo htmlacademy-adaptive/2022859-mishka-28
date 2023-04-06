@@ -1,0 +1,33 @@
+/* Card */
+
+// .card {
+
+// }
+
+/* Title */
+
+.card__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $basic-black;
+}
+
+/* Description */
+
+.card__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 30px;
+  color: $basic-dark-gray;
+}
+
+/* Price */
+
+.card__price {
+  font-size: 15px;
+  line-height: 24px;
+  color: $basic-black;
+}

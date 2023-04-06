@@ -1,0 +1,12 @@
+/* Button */
+
+.button {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  text-decoration: none;
+  color: $basic-dark-gray;
+  background-color: $basic-white;
+  border: 2px solid $basic-dark-gray;
+}

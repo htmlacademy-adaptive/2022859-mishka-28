@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
   <title>Форма</title>
 </head>
 <body class="page__body">
@@ -18,12 +19,12 @@
       <button class="menu__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <ul class="menu__list site-list">
-        <li class="site-list__item">
-          <a class="site-list__link" href="catalog.html">Каталог товаров</a>
+      <ul class="menu__list">
+        <li class="menu__item">
+          <a class="menu__link" href="catalog.html">Каталог товаров</a>
         </li>
-        <li class="site-list__item">
-          <a class="site-list__link">Вязание на заказ</a>
+        <li class="menu__item">
+          <a class="menu__link">Вязание на заказ</a>
         </li>
       </ul>
       <ul class="menu__list user-list">
@@ -39,22 +40,24 @@
           </a>
         </li>
       </ul>
-      <p class="header__additional-text">Бесплатная доставка по России</p>
+      <!-- <p class="header__additional-text">Бесплатная доставка по России</p> -->
 
       <!-- Дополнительное меню -->
-      <ul class="header__additional-list">
+      <!-- <ul class="header__additional-list">
         <li class="header__additional-item">
           <a class="header__additional-link">Новые поступления</a>
         </li>
         <li class="header__additional-item">
           <a class="header__additional-link">Распродажа</a>
         </li>
-      </ul>
+      </ul> -->
     </nav>
   </header>
-  <main class="main-continer hero">
+  <main class="main">
+    <section class="hero">
       <div class="hero__wrapper wrapper">
-      <h1 class="hero__title">Вязание на заказ</h1>
+        <h1 class="hero-form__title title">Вязание на заказ</h1>
+    </section>
     </div>
 
     <!-- Форма для заказа -->
@@ -70,13 +73,13 @@
             <ul class="form__list">
               <li class="form__item">
                 <label class="form__radiobox">
-                  <input type="radio" name="type" value="interior-accessories">
+                  <input class="control" type="radio" name="type" value="interior-accessories">
                   <span class="form__text">Аксесуары для интерьера</span>
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__radiobox">
-                  <input type="radio" name="type" value="children's-toy">
+                  <input class="control" type="radio" name="type" value="children's-toy">
                   <span class="form__text">Детская игрушка</span>
                 </label>
               </li>
@@ -126,40 +129,41 @@
               </ul>
           </fieldset>
           <div class="form__field-group">
-            <span class="form__group-heading">ФИО</span>
-            <p class="form__item">
+            <p class="form__group-heading">фио</p>
+            <p class="form__field">
               <label class="form__title" for="name">Имя</label>
               <input class="form__input" type="text" id="name" placeholder="Введите ваше имя*">
             </p>
-            <p class="form__item">
+            <p class="form__field">
               <label class="form__title" for="surname">Фамилия:</label>
               <input class="form__input" type="text" id="surname" placeholder="Укажите фамилию*">
             </p>
-            <p class="form__item">
+            <p class="form__field">
               <label class="form__title" for="patronymic">Отчество:</label>
               <input class="form__input" type="text" id="patronymic" placeholder="Отчество, если желаете">
             </p>
           </div>
           <div class="form__field-group">
-            <p class="form__item">
+            <p class="form__field">
               <label class="form__group-heading" for="phone">Тел</label>
-              <input class="form__input" type="tel" name="phone" id="phone">
+              <input class="form__input" type="tel" name="phone" id="phone" placeholder="+7 ХХХ ХХХ ХХ ХХ*">
             </p>
-            <p class="form__item">
+            <p class="form__field">
               <label class="form__group-heading" for="email">e-mail</label>
-              <input class="form__input" type="email" name="email" id="email">
+              <input class="form__input" type="email" name="email" id="email" placeholder="Ваш Email*">
             </p>
           </div>
           <div class="form__field-group">
-            <label for="form__group-heading">Доп</label>
+            <label class="form__group-heading" for="form__additionally">Доп</label>
             <textarea class="form__textarea" id="form__additionally" name="additionally" cols="30" rows="10"></textarea>
           </div>
-          <button class="form__button button" type="submit">Отправить заказа</button>
           <p class="form__legend">
             <small>
-              * — приведённые данные ложь
+              *Поля обязательны для заполнения
             </small>
           </p>
+          <button class="form__button button" type="submit">Отправить заказа</button>
+
         </form>
       </div>
     </section>
@@ -167,14 +171,14 @@
 
       <!-- Подвал -->
       <footer class="footer">
-        <div class="footer__wrapper wrapper">
+        <div class="footer__wrapper">
           <!-- Лого в подвале -->
 
-          <a class="footer__logo" href="#">
+          <!-- <a class="footer__logo" href="#">
             <span class="visually-hidden">На главную</span>
             <img src="" alt="" >
           </a>
-        </div>
+        </div> -->
 
         <!-- Социальные сети -->
         <div class="footer__social social">
@@ -198,9 +202,9 @@
         </div>
 
         <!-- Ссылка на академению -->
-        <div class="footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <div class="footer__copyright">
+          <b class="footer__copyright-text">Разработано:</b>
+          <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
             <svg width="27" heigth="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="#63D1BB" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
             <span class="visually-hidden">HTML Academy</span>
           </a>
