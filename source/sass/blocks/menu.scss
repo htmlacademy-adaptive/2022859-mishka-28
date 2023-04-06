@@ -7,9 +7,7 @@
 /* List */
 
 .menu__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include overlay;
   font-size: 17px;
 }
 

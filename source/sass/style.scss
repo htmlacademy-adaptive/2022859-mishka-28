@@ -3,11 +3,12 @@
 /* Global */
 
 @import "./variables.scss";
+@import "./mixins.scss";
 @import "./fonts.scss";
 @import "./reboot.scss";
 @import "./blocks/wrapper.scss";
 
-/* blocks */
+/* Blocks */
 
 @import "./blocks/page.scss";
 @import "./blocks/header.scss";
