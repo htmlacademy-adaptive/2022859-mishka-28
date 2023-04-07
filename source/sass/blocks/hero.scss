@@ -39,6 +39,16 @@
 .hero__list {
   @include overlay;
   font-size: 19px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  @media (min-width: 1068px) {
+    flex-direction: row;
+  }
 }
 
 /* Item */
@@ -48,6 +58,7 @@
   line-height: 24px;
   background-color: $basic-green;
   padding: 24px 30px;
+  flex-grow: 1;
 }
 
 /* Link */

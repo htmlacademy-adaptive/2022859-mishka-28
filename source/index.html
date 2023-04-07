@@ -11,15 +11,15 @@
 
     <!-- Шапка -->
     <header class="header">
+      <a class="header__logo" aria-label="Логотип">
+        <img class="header__logo-icon" src="img/mishka-logo-mobile.svg" width="86" height="35" decoding="async" alt="Логотип магазина Мишка">
+    </a>
       <!-- Основное меню -->
       <nav class="header__menu menu">
-        <a class="header__logo" aria-label="Логотип">
-            <img class="header__logo-icon" src="img/mishka-logo-mobile.svg" width="86" height="35" decoding="async" alt="Логотип магазина Мишка">
-        </a>
-        <button class="menu__toggle" type="button">
+        <button class="menu__toggle" type="button" aria-expanded="false" aria-controls="menu__list">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="menu__list">
+        <ul class="menu__list" id="menu__list">
           <li class="menu__item">
             <a class="menu__link" href="catalog.html">Каталог товаров</a>
           </li>
@@ -80,10 +80,10 @@
       <section class="promo">
         <div class="promo__wrapper wrapper">
           <h2 class="visually-hidden">Рекомендуемые вязаные корзины</h2>
+          <div class="promo__card">
           <h3 class="promo__title title">Вязаные корзинки</h3>
           <p class="promo__legend">Товар недели</p>
           <p class="promo__description">Экологически чистая пряжа,<br>ручная работа. Доступны в шести<br>расцветках и трёх размерах.</p>
-          <img class="promo__image" src="../source/img/knitted-basket-mobile.jpg" width="260" height="315" decoding="async" alt="Вязаная коризна">
           <dl class="promo__list">
             <div class="promo__item">
               <dt>Цвет</dt>
@@ -98,8 +98,10 @@
               <dd>15см</dd>
             </div>
           </dl>
+          <img class="promo__image" src="./img/knitted-basket-mobile.jpg" width="260" height="315" decoding="async" alt="Вязаная коризна">
           <b class="promo__price">Цена: 990 руб.</b>
           <a class="promo__buy button" href="">Заказать</a>
+        </div>
         </div>
       </section>
 

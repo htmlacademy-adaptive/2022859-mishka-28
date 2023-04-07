@@ -9,6 +9,16 @@
 .menu__list {
   @include overlay;
   font-size: 17px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  @media (min-width: 1068px) {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* Item */
@@ -23,4 +33,12 @@
 .menu__link {
   color: $basic-black;
   text-decoration: none;
+}
+
+.menu__toggle {
+  display: flex;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }

@@ -3,15 +3,21 @@
 .header {
   position: relative;
   display: grid;
-  padding-bottom: 31px;
-  padding-left: 116px;
-  padding-right: 118px;
+  background-color: $basic-white;
+  box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
 }
 
 /* Logo */
 
-.header__logo-icon {
-  width: 86px;
+.header__logo {
   height: 35px;
-  margin-top: 22px;
+
+  @media (min-width: 768px) {
+    height: 46px;
+  }
+
+  @media (min-width: 1068px) {
+    height: 72px;
+  }
 }
+
