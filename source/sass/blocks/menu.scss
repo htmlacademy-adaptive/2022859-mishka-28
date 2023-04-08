@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @include tablet {
     flex-direction: row;
   }
 }
@@ -15,13 +15,13 @@
   @include overlay;
   font-size: 17px;
 
-  @media (min-width: 768px) {
+  @include tablet {
     display: flex;
     justify-content: center;
     width: 321px;
   }
 
-  @media (min-width: 1068px) {
+  @include desktop {
     display: flex;
     flex-direction: row;
   }
@@ -44,7 +44,7 @@
 .menu__toggle {
   display: flex;
 
-  @media (min-width: 768px) {
+  @include tablet {
     display: none;
   }
 }

@@ -42,11 +42,22 @@
 /* Title */
 
 .promo__title {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  color: $basic-black;
   margin: 0;
   margin-bottom: 4px;
 
-  @media (min-width: 1068px) {
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
     grid-column: 2/1;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
   }
 }
 
@@ -67,7 +78,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @include tablet {
     grid-column: 2/1;
   }
 }
@@ -95,13 +106,13 @@
   line-height: 24px;
   color: $basic-dark-gray;
 
-  @media (min-width: 768px) {
+  @include tablet {
     grid-row: 4/5;
   }
 }
 
 .promo__image {
-  @media (min-width: 768px) {
+  @include tablet {
     grid-column: 2/2;
     grid-row: -5/-2;
     align-self: center;

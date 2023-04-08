@@ -1,15 +1,15 @@
 /* Wrapper */
 
 .wrapper {
-  width: auto;
+  width: 100%;
   padding: 0 30px;
+  margin: 0 auto;
 
-  @media (min-width: 768px) {
-    width: auto;
+  @include tablet {
     padding: 0 50px;
   }
 
-  @media (min-width: 1068px) {
+  @include desktop {
     width: 1050px;
     padding: 0 50px;
   }

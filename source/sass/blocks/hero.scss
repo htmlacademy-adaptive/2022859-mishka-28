@@ -15,21 +15,35 @@
 /* Title */
 
 .hero__title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  color: $basic-black;
   margin: 0;
   padding-top: 72px;
   margin-bottom: 120px;
   text-align: center;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
-.hero-form__title {
+.hero__title--form {
   margin: 0;
-  padding: 74px 23px;
+  padding: 74px 0;
   text-align: center;
 }
 
-.hero-catalog__title {
+.hero__title--catalog {
   margin: 0;
-  padding: 73px 42px;
+  padding: 73px 0;
 }
 
 /* List */
@@ -40,11 +54,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
-    flex-direction: row;
-  }
-
-  @media (min-width: 1068px) {
+  @include tablet {
     flex-direction: row;
   }
 }

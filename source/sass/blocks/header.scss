@@ -12,11 +12,11 @@
 .header__logo {
   height: 35px;
 
-  @media (min-width: 768px) {
+  @include tablet {
     height: 46px;
   }
 
-  @media (min-width: 1068px) {
+  @include desktop {
     height: 72px;
   }
 }

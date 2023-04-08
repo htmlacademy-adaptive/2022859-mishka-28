@@ -9,10 +9,9 @@
 
 .product__list {
   @include overlay;
-
   display: grid;
 
-  @media (min-width: 1068px) {
+  @include desktop {
     grid-template-columns: 316px 315px 316px;
   }
 }

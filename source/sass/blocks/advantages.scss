@@ -5,7 +5,7 @@
   padding-bottom: 51px;
   display: flex;
 
-  @media (min-width: 1068px) {
+  @include desktop {
     width: 656px;
     margin: 0 auto;
   }
@@ -16,6 +16,19 @@
 .advantages__title {
   margin: 0;
   margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 /* List */
@@ -26,7 +39,7 @@
   display: flex;
   flex-direction: column;
 
-  @media (min-width: 768px) {
+  @include tablet {
     display: grid;
     grid-template-columns: 293px 1fr;
   }
@@ -39,7 +52,7 @@
     margin-bottom: 28px;
   }
 
-  @media (min-width: 768px) {
+  @include tablet {
     max-width: 323px;
   }
 }
