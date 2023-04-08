@@ -1,6 +1,8 @@
 /* Contacts */
 
 .contacts {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 39px;
 }
 
@@ -13,8 +15,14 @@
 /* Address */
 
 .contacts__address {
+  display: flex;
+  flex-direction: column;
   font-style: normal;
   margin-bottom: 62px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 /* List */

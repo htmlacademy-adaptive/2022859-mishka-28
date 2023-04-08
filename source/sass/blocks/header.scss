@@ -2,7 +2,7 @@
 
 .header {
   position: relative;
-  display: grid;
+  display: flex;
   background-color: $basic-white;
   box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
 }
@@ -20,4 +20,3 @@
     height: 72px;
   }
 }
-

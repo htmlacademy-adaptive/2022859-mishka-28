@@ -1,8 +1,13 @@
 /* Menu */
 
-// .menu {
+.menu {
+  display: flex;
+  flex-direction: column;
 
-// }
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
 
 /* List */
 
@@ -12,7 +17,8 @@
 
   @media (min-width: 768px) {
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    width: 321px;
   }
 
   @media (min-width: 1068px) {
@@ -41,4 +47,8 @@
   @media (min-width: 768px) {
     display: none;
   }
+}
+
+.user__list {
+  display: flex;
 }

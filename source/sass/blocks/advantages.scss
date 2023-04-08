@@ -3,6 +3,12 @@
 .advantages {
   padding-top: 31px;
   padding-bottom: 51px;
+  display: flex;
+
+  @media (min-width: 1068px) {
+    width: 656px;
+    margin: 0 auto;
+  }
 }
 
 /* Title */
@@ -17,6 +23,13 @@
 .advantages__list {
   @include overlay;
   margin-bottom: 31px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 293px 1fr;
+  }
 }
 
 /* Item */
@@ -24,6 +37,10 @@
 .advantages__item {
   &:not(:last-child) {
     margin-bottom: 28px;
+  }
+
+  @media (min-width: 768px) {
+    max-width: 323px;
   }
 }
 
