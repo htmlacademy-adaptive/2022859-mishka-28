@@ -2,15 +2,36 @@
 
 .header {
   position: relative;
-  display: flex;
+  display: grid;
+  height: 79px;
+  padding: 22px;
   background-color: $basic-white;
   box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
+
+  @include tablet {
+    height: 89px;
+
+    &--index {
+      grid-template-columns: 1fr;
+    }
+  }
 }
+
+/* Menu */
+
+.header__menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
 
 /* Logo */
 
 .header__logo {
   height: 35px;
+  text-align: center;
 
   @include tablet {
     height: 46px;
@@ -18,5 +39,16 @@
 
   @include desktop {
     height: 72px;
+  }
+}
+
+.header__logo img {
+  width: 86px;
+  height: 35px;
+}
+
+.header__additional-list {
+  @include tablet {
+    display: none;
   }
 }
