@@ -1,16 +1,30 @@
 /* Menu */
 
-// .menu {
+.menu {
+  display: flex;
+  flex-direction: column;
 
-// }
+  @include tablet {
+    flex-direction: row;
+  }
+}
 
 /* List */
 
 .menu__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include overlay;
   font-size: 17px;
+
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    width: 321px;
+  }
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /* Item */
@@ -25,4 +39,16 @@
 .menu__link {
   color: $basic-black;
   text-decoration: none;
+}
+
+.menu__toggle {
+  display: flex;
+
+  @include tablet {
+    display: none;
+  }
+}
+
+.user__list {
+  display: flex;
 }

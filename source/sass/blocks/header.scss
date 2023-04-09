@@ -2,16 +2,21 @@
 
 .header {
   position: relative;
-  display: grid;
-  padding-bottom: 31px;
-  padding-left: 116px;
-  padding-right: 118px;
+  display: flex;
+  background-color: $basic-white;
+  box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
 }
 
 /* Logo */
 
-.header__logo-icon {
-  width: 86px;
+.header__logo {
   height: 35px;
-  margin-top: 22px;
+
+  @include tablet {
+    height: 46px;
+  }
+
+  @include desktop {
+    height: 72px;
+  }
 }

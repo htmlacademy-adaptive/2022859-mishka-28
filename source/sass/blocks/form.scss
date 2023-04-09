@@ -1,6 +1,8 @@
 /* Form */
 
 .form {
+  display: flex;
+  flex-direction: column;
   padding-bottom: 55px;
 }
 
@@ -10,6 +12,7 @@
   margin: 0;
   padding: 0;
   border: none;
+  display: flex;
 
   &:not(:last-child) {
     margin-bottom: 30px;
@@ -17,9 +20,14 @@
 }
 
 
-// .form__field-group {
+.form__field-group {
+  display: flex;
+  flex-direction: column;
 
-// }
+  @include tablet {
+    flex-direction: row;
+  }
+}
 
 .form__field {
   display: flex;
@@ -41,10 +49,16 @@
 /* List */
 
 .form__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include overlay;
   font-size: 17px;
+
+  &--checkbox {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
 }
 
 /* Item */

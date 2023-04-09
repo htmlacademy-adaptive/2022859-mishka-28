@@ -3,6 +3,12 @@
 .advantages {
   padding-top: 31px;
   padding-bottom: 51px;
+  display: flex;
+
+  @include desktop {
+    width: 656px;
+    margin: 0 auto;
+  }
 }
 
 /* Title */
@@ -10,15 +16,33 @@
 .advantages__title {
   margin: 0;
   margin-bottom: 28px;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 /* List */
 
 .advantages__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include overlay;
   margin-bottom: 31px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    display: grid;
+    grid-template-columns: 293px 1fr;
+  }
 }
 
 /* Item */
@@ -26,6 +50,10 @@
 .advantages__item {
   &:not(:last-child) {
     margin-bottom: 28px;
+  }
+
+  @include tablet {
+    max-width: 323px;
   }
 }
 

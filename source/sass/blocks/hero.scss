@@ -6,41 +6,57 @@
 
   &--index {
     background-image: url("../../img/hero-mobile@2x\ 1.jpg");
-    background-position: center;
-    background-size: cover;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     width: 100%;
-    height: 570px;
   }
 }
 
 /* Title */
 
 .hero__title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  color: $basic-black;
   margin: 0;
   padding-top: 72px;
   margin-bottom: 120px;
   text-align: center;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
-.hero-form__title {
+.hero__title--form {
   margin: 0;
-  padding: 74px 23px;
+  padding: 74px 0;
   text-align: center;
 }
 
-.hero-catalog__title {
+.hero__title--catalog {
   margin: 0;
-  padding: 73px 42px;
+  padding: 73px 0;
 }
 
 /* List */
 
 .hero__list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  @include overlay;
   font-size: 19px;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+  }
 }
 
 /* Item */
@@ -50,6 +66,7 @@
   line-height: 24px;
   background-color: $basic-green;
   padding: 24px 30px;
+  flex-grow: 1;
 }
 
 /* Link */

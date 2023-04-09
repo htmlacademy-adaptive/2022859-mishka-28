@@ -8,7 +8,10 @@
 /* List */
 
 .product__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include overlay;
+  display: grid;
+
+  @include desktop {
+    grid-template-columns: 316px 315px 316px;
+  }
 }

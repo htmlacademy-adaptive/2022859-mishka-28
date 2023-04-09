@@ -2,11 +2,9 @@
 
 
 .social__list {
+  @include overlay;
   display: flex;
   flex-direction: row;
-  margin: 0;
-  padding: 0;
-  list-style: none;
   padding-left: 89px;
   padding-right: 89px;
 }
