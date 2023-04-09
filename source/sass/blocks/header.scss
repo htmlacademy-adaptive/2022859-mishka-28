@@ -10,10 +10,8 @@
 
   @include tablet {
     height: 89px;
-
-    &--index {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
+    padding-left: 50px;
   }
 }
 
@@ -35,6 +33,7 @@
 
   @include tablet {
     height: 46px;
+    text-align: left;
   }
 
   @include desktop {
