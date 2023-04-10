@@ -13,6 +13,10 @@
     grid-template-columns: 1fr 1fr;
     padding-left: 50px;
   }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
 
 /* Menu */
@@ -28,8 +32,12 @@
 /* Logo */
 
 .header__logo {
+  width: 86px;
   height: 35px;
   text-align: center;
+  z-index: 1;
+  margin: 0 auto;
+  cursor: pointer;
 
   @include tablet {
     height: 46px;
@@ -38,6 +46,8 @@
 
   @include desktop {
     height: 72px;
+    grid-column: 2/2;
+    text-align: right;
   }
 }
 
@@ -47,7 +57,32 @@
 }
 
 .header__additional-list {
-  @include tablet {
-    display: none;
+  display: none;
+
+  @include desktop {
+    @include overlay;
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/2;
+    z-index: 3;
+    font-size: 17px;
+  }
+}
+
+.header__additional-item {
+  @include desktop {
+    font-weight: 700;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+  }
+}
+
+.header__additional-link {
+  @include desktop {
+    text-decoration: none;
+    color: $basic-black;
   }
 }
