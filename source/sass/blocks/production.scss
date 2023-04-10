@@ -9,6 +9,8 @@
 // }
 
 .production__item {
+  display: flex;
+  flex-direction: column;
   border: 1px solid $basic-semi-gray;
 }
 
@@ -20,6 +22,10 @@
   font-size: 17px;
   line-height: 24px;
   color: $basic-black;
+  padding-top: 22px;
+  padding-left: 34px;
+  padding-right: 13px;
+
 
   @include tablet {
     font-size: 20px;

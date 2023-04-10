@@ -10,8 +10,14 @@
 .product__list {
   @include overlay;
   display: grid;
+  row-gap: 30px;
+
+  @include tablet {
+    row-gap: 54px;
+  }
 
   @include desktop {
     grid-template-columns: 316px 315px 316px;
+    gap: 51px;
   }
 }
