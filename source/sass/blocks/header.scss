@@ -15,7 +15,7 @@
   }
 
   @include desktop {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -40,14 +40,18 @@
   cursor: pointer;
 
   @include tablet {
+    width: 114px;
     height: 46px;
     text-align: left;
+    margin: 0;
   }
 
   @include desktop {
+    width: 149px;
     height: 72px;
     grid-column: 2/2;
-    text-align: right;
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
