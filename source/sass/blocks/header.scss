@@ -3,22 +3,18 @@
 .header {
   position: relative;
   display: grid;
-  height: 79px;
-  padding: 22px;
   background-color: $basic-white;
   box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
 
   @include tablet {
-    height: 89px;
-    grid-template-columns: 1fr 1fr;
-    padding-left: 50px;
   }
 
   @include desktop {
-    width: 1050px;
-    margin: 0 auto;
-    grid-template-columns: 1fr 1fr 1fr;
   }
+}
+
+.header__inner {
+  padding: 22px;
 }
 
 /* Menu */
@@ -32,6 +28,10 @@
 
 
 /* Logo */
+
+.header__logo-wrapper {
+  display: grid;
+}
 
 .header__logo {
   width: 86px;
@@ -55,11 +55,57 @@
     text-align: center;
     margin: 0 auto;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #3f3dbc;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .header__logo img {
   width: 86px;
   height: 35px;
+}
+
+/* Title */
+
+.header__title-wrapper {
+  padding: 70px 30px 77px;
+  background-color: $basic-gray;
+
+  &--index {
+    background-image: url("../../img/hero-mobile@2x\ 1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -18px;
+    padding-bottom: 120px;
+  }
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  color: $basic-black;
+  margin: 0;
+  text-align: center;
+
+  @include tablet {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @include desktop {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .header__additional-list {

@@ -4,35 +4,7 @@
   position: relative;
   background-color: $basic-gray;
 
-  &--index {
-    background-image: url("../../img/hero-mobile@2x\ 1.jpg");
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    width: 100%;
-  }
-}
 
-/* Title */
-
-.hero__title {
-  font-weight: 700;
-  font-size: 27px;
-  line-height: 30px;
-  color: $basic-black;
-  margin: 0;
-  padding-top: 72px;
-  margin-bottom: 120px;
-  text-align: center;
-
-  @include tablet {
-    font-size: 43px;
-    line-height: 50px;
-  }
-
-  @include desktop {
-    font-size: 53px;
-    line-height: 57px;
-  }
 }
 
 .hero__title--form {
