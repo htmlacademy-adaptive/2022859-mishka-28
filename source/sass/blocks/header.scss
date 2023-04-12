@@ -7,7 +7,13 @@
 
   @include tablet {
     background: linear-gradient($basic-white 88px,$basic-semi-gray 2px,transparent 90px);
-    background-color: #fafafa;
+    background-color: #f9f9f9;
+  }
+
+  &--bg {
+    @include tablet {
+      background-color: #f1f1f1;
+    }
   }
 }
 
@@ -18,6 +24,7 @@
     padding-left: 50px;
   }
 }
+
 
 /* Menu */
 
@@ -92,7 +99,7 @@
 
 .header__title-wrapper {
   padding: 70px 30px 77px;
-  background-color: $basic-gray;
+  background-color: #f9f9f9;
 
   &--index {
     background-image: url("../../img/hero-mobile@2x\ 1.jpg");
@@ -100,6 +107,14 @@
     background-repeat: no-repeat;
     background-position: center -18px;
     padding-bottom: 120px;
+  }
+
+  &--catalog {
+    background-color: #f1f1f1;
+  }
+
+  &--form {
+    background-color: #f1f1f1;
   }
 }
 
@@ -122,6 +137,8 @@
     font-size: 53px;
     line-height: 57px;
   }
+
+
 }
 
 .header__additional-list {

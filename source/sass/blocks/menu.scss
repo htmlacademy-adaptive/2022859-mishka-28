@@ -130,6 +130,7 @@
 
   @include desktop {
     grid-column: 3/3;
+    min-height: 88px;
   }
 }
 
@@ -166,7 +167,7 @@
 .user-list__item--search {
   padding-right: 31px;
 
-  @include desktop {
+  @include tablet {
     border-left: 1px solid $basic-semi-gray;
     border-right: 1px solid $basic-semi-gray;
   }
