@@ -1,0 +1,71 @@
+// Categories
+
+.categories {
+  position: relative;
+  line-height: 24px;
+
+  @include tablet {
+    line-height: 30px;
+  }
+}
+
+// Wrapper
+
+.categories .wrapper {
+  padding: 0;
+
+  @include tablet {
+    padding: 0 50px;
+  }
+
+  @include desktop {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+}
+
+
+// List
+
+.categories__list {
+  @include overlay;
+  font-size: 19px;
+
+  @include tablet {
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+// Item
+
+.categories__item {
+  font-weight: 700;
+
+  @include tablet {
+    width: 50%;
+  }
+}
+
+// Link
+
+.categories__link {
+  display: block;
+  padding: 24px 160px 31px 30px;
+  text-decoration: none;
+  color: $basic-white;
+  background-color: $basic-green;
+
+  @include tablet {
+    padding: 25px 167px 34px 36px;
+  }
+
+  @include desktop {
+    padding: 25px 350px 34px 36px;
+  }
+}
+
+.categories__link--toy {
+  background-color: $basic-dark-green;
+}

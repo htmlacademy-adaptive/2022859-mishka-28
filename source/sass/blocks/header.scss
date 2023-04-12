@@ -18,6 +18,8 @@
 }
 
 .header__inner {
+  min-height: 79px;
+
   @include tablet {
     display: grid;
     padding-right: 50px;
@@ -29,7 +31,14 @@
 /* Menu */
 
 .header__menu {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+
+  @include tablet {
+    position: relative;
+  }
 }
 
 
@@ -98,8 +107,16 @@
 /* Title */
 
 .header__title-wrapper {
-  padding: 70px 30px 77px;
+  padding: 77px 30px;
   background-color: #f9f9f9;
+
+  @include tablet {
+    padding: 111px 50px;
+  }
+
+  @include desktop {
+    padding: 112px 175px;
+  }
 
   &--index {
     background-image: url("../../img/hero-mobile@2x\ 1.jpg");
@@ -107,6 +124,14 @@
     background-repeat: no-repeat;
     background-position: center -18px;
     padding-bottom: 120px;
+
+    @include tablet {
+      padding-bottom: 372px;
+    }
+
+    @include desktop {
+      padding-bottom: 355px;
+    }
   }
 
   &--catalog {
@@ -129,16 +154,14 @@
   @include tablet {
     font-size: 43px;
     line-height: 50px;
+    margin: 0 auto;
+    width: 70%;
   }
 
   @include desktop {
-    margin: 0 auto;
-    width: 60%;
     font-size: 53px;
     line-height: 57px;
   }
-
-
 }
 
 .header__additional-list {
