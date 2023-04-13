@@ -3,10 +3,22 @@
 .button {
   display: inline-block;
   font-weight: 700;
+  padding: 16px;
   font-size: 18px;
   line-height: 20px;
+  text-align: center;
   text-decoration: none;
+  text-transform: uppercase;
   color: $basic-dark-gray;
   background-color: $basic-white;
   border: 2px solid $basic-dark-gray;
+
+  &:hover {
+    background-color: $basic-dark-gray;
+    color: $basic-white;
+  }
+
+  &:active {
+    color: rgb(255, 255, 255, 0.3);
+  }
 }
