@@ -6,7 +6,7 @@
   box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
 
   @include tablet {
-    background: linear-gradient($basic-white 88px,$basic-semi-gray 2px,transparent 90px);
+    background: linear-gradient($basic-white 88px, $basic-semi-gray 2px, transparent 90px);
     background-color: #f9f9f9;
   }
 
