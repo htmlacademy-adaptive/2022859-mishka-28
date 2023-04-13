@@ -9,21 +9,6 @@
   }
 }
 
-// Wrapper
-
-.categories .wrapper {
-  padding: 0;
-
-  @include tablet {
-    padding: 0 50px;
-  }
-
-  @include desktop {
-    max-width: 1050px;
-    margin: 0 auto;
-  }
-}
-
 
 // List
 
