@@ -5,6 +5,10 @@
   flex-direction: column;
   padding-bottom: 39px;
   padding-top: 38px;
+
+  @include tablet {
+    padding-top: 68px;
+  }
 }
 
 /* Title */
@@ -20,6 +24,7 @@
   @include tablet {
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 49px;
   }
 
   @include desktop {
@@ -52,6 +57,10 @@
 
 .contacts__address dt {
   width: 30%;
+
+  @include tablet {
+    width: 36%;
+  }
 }
 
 .contacts__address dt,
@@ -61,6 +70,10 @@
   line-height: 30px;
   color: $basic-dark-gray;
   margin: 0;
+
+  @include tablet {
+    font-size: 17px;
+  }
 }
 
 /* Link */
