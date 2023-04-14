@@ -12,10 +12,15 @@
   color: $basic-dark-gray;
   background-color: $basic-white;
   border: 2px solid $basic-dark-gray;
+  cursor: pointer;
 
   &:hover {
     background-color: $basic-dark-gray;
     color: $basic-white;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #061bd8;
   }
 
   &:active {

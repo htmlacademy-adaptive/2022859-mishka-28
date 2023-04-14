@@ -1,0 +1,21 @@
+// Zig-Zag
+
+.zig-zag {
+  &::after {
+    content: "";
+    background-image: url("../../img/zigzag.svg");
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    top: 100%;
+    display: block;
+    background-size: 320px 6px;
+  }
+
+  @include tablet {
+    &::after {
+      height: 17px;
+      background-size: 772px 17px;
+    }
+  }
+}

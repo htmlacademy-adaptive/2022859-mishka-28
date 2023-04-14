@@ -1,0 +1,37 @@
+// Copyright
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  padding: 22px 43px 23px 39px;
+}
+
+.copyright__text {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
+}
+
+// Link
+
+.copyright__link {
+  display: flex;
+  text-decoration: none;
+  color: $basic-black;
+}
+
+// Icon
+
+.copyright__link-icon {
+  color: $basic-green;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

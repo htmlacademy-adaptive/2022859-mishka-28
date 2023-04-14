@@ -1,0 +1,8 @@
+// Slider
+
+.slider {
+  @include tablet {
+    background-image: url("..//..//img/review-bg.jpg");
+    background-repeat: no-repeat;
+  }
+}

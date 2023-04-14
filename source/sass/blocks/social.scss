@@ -5,8 +5,33 @@
   @include overlay;
   display: flex;
   flex-direction: row;
-  padding-left: 89px;
-  padding-right: 89px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 62px 28px 59px;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 /* Item */
+
+.social__item {
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid #271ac0;
+  }
+}
+
+
+// Icon
+
+.social__link-icon {
+  color: $basic-black;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
