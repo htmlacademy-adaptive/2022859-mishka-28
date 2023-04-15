@@ -11,8 +11,8 @@
   }
 
   @include desktop {
-    width: 656px;
-    margin: 0 auto;
+    padding-top: 68px;
+    padding-bottom: 90px;
   }
 }
 
@@ -34,6 +34,8 @@
   @include desktop {
     font-size: 53px;
     line-height: 57px;
+    margin-left: 225px;
+    margin-bottom: 39px;
   }
 }
 
@@ -50,6 +52,13 @@
     grid-template-columns: 293px 1fr;
     column-gap: 51px;
     row-gap: 63px;
+  }
+
+  @include desktop {
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    width: 628px;
+    column-gap: 27px;
   }
 }
 

@@ -8,6 +8,11 @@
 
   @include tablet {
     padding-top: 68px;
+    padding-bottom: 57px;
+  }
+
+  @include desktop {
+    padding-top: 71px;
   }
 }
 
@@ -46,6 +51,11 @@
   }
 }
 
+.contacts__email {
+  width: auto;
+  padding-right: 13px;
+}
+
 /* List */
 
 .contacts__list {
@@ -53,6 +63,14 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 40px;
+
+  @include tablet {
+    margin-right: 63px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
 }
 
 .contacts__address dt {
@@ -97,15 +115,27 @@
 .contacts__write {
   width: 81%;
   margin: 0 auto;
+
+  @include tablet {
+    width: 230px;
+  }
 }
 
 /* Images */
 
 .contacts__map {
   margin-bottom: 42px;
+
+  @include tablet {
+    margin-bottom: 55px;
+  }
 }
 
 .contacts iframe {
   display: block;
   border: none;
+
+  @include tablet {
+    width: 100%;
+  }
 }

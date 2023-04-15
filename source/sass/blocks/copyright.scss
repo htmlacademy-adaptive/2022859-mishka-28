@@ -6,6 +6,10 @@
   justify-content: space-between;
   min-height: 40px;
   padding: 22px 43px 23px 39px;
+
+  @include tablet {
+    padding: 0;
+  }
 }
 
 .copyright__text {

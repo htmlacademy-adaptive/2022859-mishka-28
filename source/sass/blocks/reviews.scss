@@ -10,6 +10,10 @@
     background-size: 350px 457px;
     padding-bottom: 116px;
   }
+
+  @include desktop {
+    padding-bottom: 163px;
+  }
 }
 
 /* Title */
@@ -64,6 +68,10 @@
     line-height: 30px;
     margin-bottom: 61px;
   }
+
+  @include desktop {
+    margin-bottom: 44px;
+  }
 }
 
 .reviews__author-name {
@@ -93,6 +101,11 @@
     left: 75%;
     top: 75%;
   }
+
+  @include desktop {
+    left: 82%;
+    top: 62%;
+  }
 }
 
 .reviews__button {
@@ -115,5 +128,10 @@
     width: 230px;
     bottom: 73%;
     left: 63%;
+  }
+
+  @include desktop {
+    bottom: 72%;
+    left: 75%;
   }
 }

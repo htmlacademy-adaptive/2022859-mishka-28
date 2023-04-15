@@ -4,8 +4,23 @@
   background-color: $basic-gray;
 }
 
+.footer__wrapper {
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 51px;
+    padding-bottom: 58px;
+  }
+}
+
 // Logo
 
 .footer__logo-wrapper {
   display: none;
+
+  @include tablet {
+    display: flex;
+  }
 }

@@ -9,6 +9,12 @@
   justify-content: space-between;
   padding: 25px 62px 28px 59px;
   border-bottom: 1px solid #e5e5e5;
+
+  @include tablet {
+    padding: 0;
+    border-bottom: none;
+    width: 142px;
+  }
 }
 
 /* Item */
