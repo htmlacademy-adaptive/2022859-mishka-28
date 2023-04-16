@@ -79,7 +79,11 @@
   @include overlay;
   display: grid;
   row-gap: 21px;
-  width: 73%;
+  width: 100%;
+
+  @include desktop {
+    width: 73%;
+  }
 
   @include desktop {
     width: 698px;
@@ -87,6 +91,7 @@
 
   &--mail {
     width: 100%;
+    row-gap: 35px;
 
     @include desktop {
       width: 828px;
@@ -128,24 +133,6 @@
     &::before {
       display: none;
     }
-
-    &--phone {
-      padding-right: 109px;
-    }
-
-    &--mail {
-      padding-right: 79px;
-    }
-  }
-
-  @include desktop {
-    &--phone {
-      padding-right: 67px;
-    }
-
-    &--mail {
-      padding-right: 69px;
-    }
   }
 }
 
@@ -159,7 +146,6 @@
   font-size: 17px;
 
   @include tablet {
-    padding-left: 133px;
     row-gap: 24px;
   }
 
@@ -168,7 +154,6 @@
 
     @include tablet {
       grid-template-columns: 1fr 1fr;
-      padding-left: 90px;
     }
   }
 }
@@ -252,11 +237,15 @@
   }
 
   &--phone {
-    background-color: #f1f1f1;
+    @include tablet {
+      background-color: #f1f1f1;
+    }
   }
 
   &--email {
-    background-color: #f1f1f1;
+    @include tablet {
+      background-color: #f1f1f1;
+    }
   }
 }
 
