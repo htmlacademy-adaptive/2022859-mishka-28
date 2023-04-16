@@ -1,6 +1,7 @@
 /* Contacts */
 
 .contacts {
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-bottom: 39px;
@@ -35,6 +36,7 @@
   @include desktop {
     font-size: 53px;
     line-height: 57px;
+    padding-left: 62px;
   }
 }
 
@@ -49,11 +51,13 @@
   @include tablet {
     flex-direction: row;
   }
-}
 
-.contacts__email {
-  width: auto;
-  padding-right: 13px;
+  @include desktop {
+    padding-left: 62px;
+    flex-direction: column;
+    width: 350px;
+    margin-bottom: 82px;
+  }
 }
 
 /* List */
@@ -71,6 +75,10 @@
       margin-right: 0;
     }
   }
+
+  @include desktop {
+    margin-right: 0;
+  }
 }
 
 .contacts__address dt {
@@ -78,6 +86,10 @@
 
   @include tablet {
     width: 36%;
+  }
+
+  @include desktop {
+    padding-right: 23px;
   }
 }
 
@@ -119,6 +131,10 @@
   @include tablet {
     width: 230px;
   }
+
+  @include tablet {
+    margin-left: 100px;
+  }
 }
 
 /* Images */
@@ -129,6 +145,12 @@
   @include tablet {
     margin-bottom: 55px;
   }
+
+  @include desktop {
+    position: absolute;
+    left: 50%;
+    margin-bottom: 0;
+  }
 }
 
 .contacts iframe {
@@ -137,5 +159,9 @@
 
   @include tablet {
     width: 100%;
+  }
+
+  @include desktop {
+    width: 527px;
   }
 }

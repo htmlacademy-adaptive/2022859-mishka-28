@@ -136,6 +136,7 @@
 
   &--catalog {
     background-color: #f1f1f1;
+    padding: 74px 30px;
   }
 
   &--form {
@@ -161,6 +162,7 @@
   @include desktop {
     font-size: 53px;
     line-height: 57px;
+    width: 90%;
   }
 }
 

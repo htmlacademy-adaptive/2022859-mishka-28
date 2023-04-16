@@ -5,10 +5,11 @@
   align-items: center;
   justify-content: space-between;
   min-height: 40px;
-  padding: 22px 43px 23px 39px;
+  padding: 20px 43px 23px 39px;
 
   @include tablet {
     padding: 0;
+    width: 180px;
   }
 }
 
@@ -30,6 +31,8 @@
 
 .copyright__link-icon {
   color: $basic-green;
+  width: 27px;
+  height: 35px;
 
   &:hover {
     color: #46c1ae;

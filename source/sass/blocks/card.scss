@@ -35,7 +35,7 @@
 
 .card__title-link {
   text-decoration: none;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 /* Description */
@@ -57,7 +57,7 @@
     background-color: $basic-semi-gray;
     position: absolute;
     height: 2px;
-    top: 60%;
+    top: 58%;
     transform: translateY(-50%);
     left: 28px;
     right: 28px;
@@ -87,7 +87,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 28px;
+  padding: 27px;
   border: 1px solid $basic-semi-gray;
 
   @include tablet {

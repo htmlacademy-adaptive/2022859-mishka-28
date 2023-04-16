@@ -6,14 +6,12 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  padding: 25px 62px 28px 59px;
+  padding: 27px 62px 25px 59px;
   border-bottom: 1px solid #e5e5e5;
 
   @include tablet {
     padding: 0;
     border-bottom: none;
-    width: 142px;
   }
 }
 
@@ -21,6 +19,11 @@
 
 .social__item {
   cursor: pointer;
+  margin-right: 29px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 
   &:focus-visible {
     outline: 2px solid #271ac0;

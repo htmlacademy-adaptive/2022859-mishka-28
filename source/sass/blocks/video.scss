@@ -1,0 +1,25 @@
+// Video
+
+.video {
+  position: relative;
+  border: 1px solid $basic-semi-gray;
+
+  @include desktop {
+    width: 682px;
+  }
+}
+
+
+// Button
+
+.video__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0;
+  width: 101px;
+  height: 76px;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: transparent;
+}

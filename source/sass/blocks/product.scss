@@ -3,6 +3,10 @@
 .product {
   padding-top: 30px;
   padding-bottom: 30px;
+
+  @include tablet {
+    padding-bottom: 51px;
+  }
 }
 
 /* List */
