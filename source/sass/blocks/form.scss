@@ -258,9 +258,11 @@
   font-size: 17px;
   line-height: 18px;
   color: inherit;
+  height: 142px;
 
   @include tablet {
     width: 75%;
+    font-size: 19px;
   }
 
   @include desktop {
@@ -336,6 +338,10 @@
   background-image: url("..//..//img/Checkbox/Tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @include tablet {
+    background-image: url("..//..//img/tick-big.svg");
+  }
 }
 
 .form__radiobox {
@@ -367,8 +373,13 @@
   background-color: $basic-green;
   border-radius: 50%;
   top: 50%;
-  transform: translateY(-50%);
-  left: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 18px;
   height: 18px;
+
+  @include tablet {
+    width: 22px;
+    height: 22px;
+  }
 }

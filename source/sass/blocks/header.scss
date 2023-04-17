@@ -39,6 +39,32 @@
   @include tablet {
     position: relative;
   }
+
+  &--nojs {
+    position: relative;
+
+    .user__list,
+    .menu__list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu__toggle {
+      display: none;
+    }
+  }
+}
+
+.header__menu--nojs .menu__list {
+  @include tablet {
+    flex-direction: row;
+  }
+}
+
+.header__menu--nojs .user__list {
+  @include tablet {
+    flex-direction: row;
+  }
 }
 
 
@@ -79,6 +105,8 @@
   }
 
   @include desktop {
+    display: flex;
+    justify-content: center;
     width: 149px;
     height: 72px;
     text-align: center;
@@ -141,6 +169,15 @@
 
   &--form {
     background-color: #f1f1f1;
+  }
+
+  &--zigzag {
+    @include tablet {
+      background-image: url("..//..//img/zigzag-fill.svg");
+      height: 24px;
+      background-repeat: repeat-x;
+      background-position: 0 bottom;
+    }
   }
 }
 
