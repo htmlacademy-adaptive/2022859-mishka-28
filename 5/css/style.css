@@ -109,6 +109,29 @@ img {
     position: relative;
   }
 }
+.header__menu--nojs {
+  position: relative;
+}
+.header__menu--nojs .user__list,
+.header__menu--nojs .menu__list {
+  display: flex;
+  flex-direction: column;
+}
+.header__menu--nojs .menu__toggle {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .header__menu--nojs .menu__list {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__menu--nojs .user__list {
+    flex-direction: row;
+  }
+}
 
 /* Logo */
 .header__logo-wrapper {
@@ -150,6 +173,8 @@ img {
 }
 @media (min-width: 1068px) {
   .header__logo {
+    display: flex;
+    justify-content: center;
     width: 149px;
     height: 72px;
     text-align: center;
@@ -210,6 +235,15 @@ img {
 }
 .header__title-wrapper--form {
   background-color: #f1f1f1;
+}
+
+@media (min-width: 768px) {
+  .header__title-wrapper-zigzag {
+    background-image: url("..//..//img/zigzag-fill.svg");
+    height: 24px;
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+  }
 }
 
 .header__title {
@@ -726,6 +760,10 @@ img {
   }
 }
 
+.promo__image {
+  margin: 0 auto;
+}
+
 .promo__info {
   display: flex;
   flex-direction: column;
@@ -920,6 +958,7 @@ img {
 @media (min-width: 1068px) {
   .reviews {
     padding-bottom: 163px;
+    background-position: 50px 2px;
   }
 }
 
@@ -944,6 +983,14 @@ img {
   .reviews__title {
     font-size: 53px;
     line-height: 57px;
+    margin-bottom: 35px;
+    padding-left: 174px;
+  }
+}
+
+@media (min-width: 1068px) {
+  .reviews__list {
+    padding-left: 174px;
   }
 }
 
@@ -955,6 +1002,11 @@ img {
 }
 .reviews__item--active {
   display: block;
+}
+@media (min-width: 768px) {
+  .reviews__item {
+    margin-bottom: 0;
+  }
 }
 
 /* Text */
@@ -1209,11 +1261,7 @@ img {
 .contacts iframe {
   display: block;
   border: none;
-}
-@media (min-width: 768px) {
-  .contacts iframe {
-    width: 100%;
-  }
+  width: 100%;
 }
 @media (min-width: 1068px) {
   .contacts iframe {
@@ -1225,8 +1273,12 @@ img {
   background-color: #f1f1f1;
 }
 
+.footer__wrapper {
+  width: 290px;
+}
 @media (min-width: 768px) {
   .footer__wrapper {
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -1461,6 +1513,7 @@ img {
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
+  width: 100%;
 }
 .form__group-heading::before {
   content: "";
@@ -1468,7 +1521,7 @@ img {
   position: absolute;
   top: 8px;
   height: 2px;
-  width: 200px;
+  width: 77%;
   left: 62px;
   background-color: #63d1bb;
 }
@@ -1537,17 +1590,24 @@ img {
 .form__legend {
   margin: 0;
   margin-top: 17px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  text-align: right;
   color: #444444;
 }
 @media (min-width: 768px) {
   .form__legend {
+    margin-top: 0;
+  }
+}
+
+.form__legend small {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+}
+@media (min-width: 768px) {
+  .form__legend small {
     font-size: 17px;
     line-height: 30px;
-    margin-top: 0;
   }
 }
 
@@ -1603,10 +1663,12 @@ img {
   font-size: 17px;
   line-height: 18px;
   color: inherit;
+  height: 142px;
 }
 @media (min-width: 768px) {
   .form__textarea {
     width: 75%;
+    font-size: 19px;
   }
 }
 @media (min-width: 1068px) {
@@ -1677,9 +1739,14 @@ img {
 }
 
 .form__checkbox-input:checked + .form__checkbox-input--control {
-  background-image: url("..//..//img/Checkbox/Tick.svg");
+  background-image: url("..//..//img/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+@media (min-width: 768px) {
+  .form__checkbox-input:checked + .form__checkbox-input--control {
+    background-image: url("..//..//img/tick-big.svg");
+  }
 }
 
 .form__radiobox {
@@ -1710,10 +1777,16 @@ img {
   background-color: #63d1bb;
   border-radius: 50%;
   top: 50%;
-  transform: translateY(-50%);
-  left: 10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 18px;
   height: 18px;
+}
+@media (min-width: 768px) {
+  .form__radiobox-input:checked + .form__radiobox-input--control::before {
+    width: 22px;
+    height: 22px;
+  }
 }
 
 /* Product */
