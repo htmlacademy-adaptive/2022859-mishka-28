@@ -156,10 +156,7 @@
 .contacts iframe {
   display: block;
   border: none;
-
-  @include tablet {
-    width: 100%;
-  }
+  width: 100%;
 
   @include desktop {
     width: 527px;

@@ -112,6 +112,7 @@
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
+  width: 100%;
 
   &::before {
     content: "";
@@ -119,7 +120,7 @@
     position: absolute;
     top: 8px;
     height: 2px;
-    width: 200px;
+    width: 77%;
     left: 62px;
     background-color: $basic-green;
   }
@@ -189,16 +190,22 @@
 .form__legend {
   margin: 0;
   margin-top: 17px;
+  color: $basic-dark-gray;
+
+  @include tablet {
+    margin-top: 0;
+  }
+}
+
+.form__legend small {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   text-align: right;
-  color: $basic-dark-gray;
 
   @include tablet {
     font-size: 17px;
     line-height: 30px;
-    margin-top: 0;
   }
 }
 
