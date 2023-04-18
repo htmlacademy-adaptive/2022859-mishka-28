@@ -1,6 +1,10 @@
 /* Form Main */
 .form-main {
   padding-top: 17px;
+
+  @include tablet {
+    padding-top: 98px;
+  }
 }
 
 /* Description */
@@ -11,6 +15,10 @@
   line-height: 24px;
   color: $basic-dark-gray;
   margin: 0;
-  margin-bottom: 29px;
-  max-width: 400px;
+  max-width: 702px;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+  }
 }

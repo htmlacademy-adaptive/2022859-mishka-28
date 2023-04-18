@@ -1,11 +1,20 @@
 /* Menu */
 
 .menu {
-  display: flex;
-  flex-direction: column;
+  display: grid;
 
   @include tablet {
-    flex-direction: row;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 21px;
+  }
+
+  @include desktop {
+    max-width: 1050px;
+    width: 100%;
+    grid-template-columns: 1fr 150px 1fr;
+    row-gap: 19px;
+    justify-self: center;
   }
 }
 
@@ -13,25 +22,65 @@
 
 .menu__list {
   @include overlay;
+  position: relative;
   font-size: 17px;
+  background-color: $basic-white;
+  display: none;
 
   @include tablet {
     display: flex;
-    justify-content: center;
-    width: 321px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 405px;
+    font-size: 15px;
+    grid-row: 2/2;
+    background: none;
+    z-index: 3;
   }
 
   @include desktop {
-    display: flex;
-    flex-direction: row;
+    font-size: 17px;
+    grid-row: 1/2;
+    align-items: center;
   }
 }
+
 
 /* Item */
 
 .menu__item {
   font-weight: 700;
   line-height: 24px;
+  padding: 29px 32px 27px 46px;
+  box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
+
+  @include tablet {
+    padding: 0;
+    background: none;
+    box-shadow: none;
+    margin-right: 37px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.menu__item--catalog {
+  @include desktop {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    padding-right: 41px;
+    border-right: 1px solid $basic-semi-gray;
+  }
 }
 
 /* Link */
@@ -41,8 +90,18 @@
   text-decoration: none;
 }
 
+/*Button */
+
 .menu__toggle {
-  display: flex;
+  position: absolute;
+  display: block;
+  padding: 0;
+  border: none;
+  height: 14px;
+  background-color: transparent;
+  justify-self: end;
+  margin: 32px 31px 33px 0;
+  cursor: pointer;
 
   @include tablet {
     display: none;
@@ -50,5 +109,76 @@
 }
 
 .user__list {
+  @include overlay;
+  position: relative;
+  font-size: 17px;
+  background-color: $basic-white;
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column: 2/2;
+    grid-row: 1/2;
+    font-size: 15px;
+    background: none;
+    justify-self: end;
+    max-width: 350px;
+    z-index: 3;
+  }
+
+  @include desktop {
+    grid-column: 3/3;
+    min-height: 88px;
+  }
+}
+
+.user-list__item {
+  box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
+  margin-right: 0;
+
+  @include tablet {
+    box-shadow: none;
+    padding-bottom: 32px;
+    padding-top: 32px;
+    padding-left: 33px;
+  }
+}
+
+.user-list__link {
+  text-align: right;
+}
+
+.user-list__link-text {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: $basic-black;
+  margin-left: 26px;
+
+  @include tablet {
+    &--closed {
+      display: none;
+    }
+  }
+}
+
+.user-list__item--search {
+  padding-right: 31px;
+
+  @include tablet {
+    border-left: 1px solid $basic-semi-gray;
+    border-right: 1px solid $basic-semi-gray;
+  }
+}
+
+.menu__list--open {
   display: flex;
+  flex-direction: column;
+  z-index: 3;
+
+  @include tablet {
+    flex-direction: row;
+  }
 }

@@ -1,12 +1,29 @@
-/* Footer */
+//  Footer
 
 .footer {
   background-color: $basic-gray;
-  padding-top: 25px;
 }
 
-/* Logo */
+.footer__wrapper {
+  width: 290px;
 
-// .footer__copyright {
+  @include tablet {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 51px;
+    padding-bottom: 58px;
+  }
+}
 
-// }
+// Logo
+
+.footer__logo-wrapper {
+  display: none;
+
+  @include tablet {
+    display: flex;
+  }
+}

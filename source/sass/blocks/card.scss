@@ -1,7 +1,16 @@
 /* Card */
 
 .card {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: row;
+  }
+
+  @include desktop {
+    flex-direction: column;
+  }
 }
 
 /* Link */
@@ -16,6 +25,17 @@
   font-size: 17px;
   line-height: 24px;
   color: $basic-black;
+
+  @include tablet {
+    font-size: 20px;
+  }
+}
+
+/* Link */
+
+.card__title-link {
+  text-decoration: none;
+  margin-bottom: 5px;
 }
 
 /* Description */
@@ -26,6 +46,22 @@
   font-size: 13px;
   line-height: 30px;
   color: $basic-dark-gray;
+  margin-bottom: 41px;
+
+  @include tablet {
+    font-size: 15px;
+  }
+
+  &::after {
+    content: "";
+    background-color: $basic-semi-gray;
+    position: absolute;
+    height: 2px;
+    top: 58%;
+    transform: translateY(-50%);
+    left: 28px;
+    right: 28px;
+  }
 }
 
 /* Price */
@@ -34,4 +70,29 @@
   font-size: 15px;
   line-height: 24px;
   color: $basic-black;
+
+  @include tablet {
+    font-size: 17px;
+    margin-top: auto;
+  }
+}
+
+/* Image */
+
+.card__images-link {
+  display: flex;
+}
+
+.card__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 27px;
+  border: 1px solid $basic-semi-gray;
+
+  @include tablet {
+    padding-left: 34px;
+    padding-top: 27px;
+    padding-right: 32px;
+  }
 }

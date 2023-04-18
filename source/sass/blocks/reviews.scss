@@ -1,7 +1,20 @@
 /* Reviews */
 
 .reviews {
-  padding-bottom: 89px;
+  position: relative;
+  padding-bottom: 45px;
+
+  @include tablet {
+    background-image: url("..//..//img/review-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 350px 457px;
+    padding-bottom: 116px;
+  }
+
+  @include desktop {
+    padding-bottom: 163px;
+    background-position: 50px 2px;
+  }
 }
 
 /* Title */
@@ -17,19 +30,41 @@
   @include tablet {
     font-size: 43px;
     line-height: 50px;
+    margin-bottom: 39px;
+    padding-top: 83px;
   }
 
   @include desktop {
     font-size: 53px;
     line-height: 57px;
+    margin-bottom: 35px;
+    padding-left: 174px;
   }
 }
+
+// List
+
+.reviews__list {
+  @include desktop {
+    padding-left: 174px;
+  }
+}
+
 
 /* Item */
 
 .reviews__item {
+  display: none;
   margin: 0;
   margin-bottom: 30px;
+
+  &--active {
+    display: block;
+  }
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 }
 
 /* Text */
@@ -41,6 +76,16 @@
   font-size: 15px;
   line-height: 30px;
   color: $basic-dark-gray;
+
+  @include tablet {
+    font-size: 17px;
+    line-height: 30px;
+    margin-bottom: 61px;
+  }
+
+  @include desktop {
+    margin-bottom: 44px;
+  }
 }
 
 .reviews__author-name {
@@ -48,8 +93,59 @@
   font-size: 17px;
   line-height: 24px;
   color: $basic-black;
+
+  @include tablet {
+    font-size: 18px;
+  }
 }
 
 .reviews__author-name--link {
   color: $basic-dark-gray;
+}
+
+// Button
+
+.reviews__button-wrapper {
+  display: flex;
+  margin-bottom: 38px;
+
+  @include tablet {
+    width: 137px;
+    position: absolute;
+    left: 75%;
+    top: 75%;
+  }
+
+  @include desktop {
+    left: 82%;
+    top: 62%;
+  }
+}
+
+.reviews__button {
+  width: 50%;
+  padding: 13px 30px;
+  background-color: transparent;
+  border: 1px solid $basic-semi-gray;
+
+  @include tablet {
+    padding: 0;
+    border: none;
+  }
+}
+
+.reviews__write {
+  width: 100%;
+
+  @include tablet {
+    position: absolute;
+    width: 230px;
+    bottom: 73%;
+    left: 63%;
+  }
+
+  @include desktop {
+    bottom: 72%;
+    left: 75%;
+  }
 }

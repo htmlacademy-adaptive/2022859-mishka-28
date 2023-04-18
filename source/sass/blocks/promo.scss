@@ -1,45 +1,70 @@
-/* Promo */
+// Promo
 
 .promo {
-  display: grid;
+  position: relative;
   padding-top: 31px;
   padding-bottom: 31px;
-}
 
-/* Card */
-
-.promo__card {
-  display: grid;
-
-  @media (min-width: 768px) {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 90px 160px 81px 1fr;
+  @include tablet {
+    padding-top: 40px;
+    padding-bottom: 55px;
   }
 
-  @media (min-width: 1068px) {
-    grid-template-columns: 140px 3fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+  @include desktop {
+    padding-top: 54px;
+    padding-bottom: 73px;
+  }
+}
+
+// Card
+
+.promo__card {
+  display: flex;
+  flex-direction: column;
+}
+
+// Header
+
+.promo__header {
+  margin-bottom: 18px;
+
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 13px;
+    margin-bottom: 38px;
+  }
+
+  @include desktop {
+    flex-direction: row-reverse;
+    max-width: 668px;
+    padding-right: 0;
+    padding-top: 61px;
+    z-index: 1;
+    margin-bottom: 35px;
+    margin-left: 32px;
   }
 }
 
 .promo__legend {
+  display: block;
   font-weight: 700;
   font-size: 17px;
   line-height: 20px;
   color: $basic-green;
   margin: 0;
-  margin-bottom: 18px;
+  margin-top: 4px;
+  text-transform: uppercase;
 
-  @media (min-width: 768px) {
+  @include tablet {
     line-height: 17px;
-  }
-
-  @media (min-width: 768px) {
-    // grid-row: ;
+    width: 100px;
+    text-align: center;
   }
 }
 
-/* Title */
+// Title
 
 .promo__title {
   font-weight: 700;
@@ -47,12 +72,10 @@
   line-height: 30px;
   color: $basic-black;
   margin: 0;
-  margin-bottom: 4px;
 
   @include tablet {
     font-size: 43px;
     line-height: 50px;
-    grid-column: 2/1;
   }
 
   @include desktop {
@@ -61,33 +84,63 @@
   }
 }
 
+// Content
 
-/* Description */
+.promo__content {
+  margin-bottom: 28px;
+
+  @include tablet {
+    width: 300px;
+    margin-bottom: 58px;
+  }
+
+  @include desktop {
+    margin-bottom: 109px;
+    margin-left: 175px;
+  }
+}
+
+// Description
+
 .promo__description {
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
   margin: 0;
+  margin-bottom: 28px;
   color: $basic-dark-gray;
+
+  @include tablet {
+    margin-bottom: 36px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @include desktop {
+    margin-bottom: 60px;
+  }
 }
 
-/* List */
+// List
 
 .promo__list {
   margin: 0;
   display: flex;
   flex-direction: column;
-
-  @include tablet {
-    grid-column: 2/1;
-  }
 }
 
-/* Item */
+// Item
 
 .promo__item {
   display: flex;
   color: $basic-dark-gray;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.promo__item dt {
+  width: 33%;
 }
 
 .promo__item dt,
@@ -98,29 +151,58 @@
   margin: 0;
 }
 
-/* Price */
+
+// Image
+
+.promo__image--wrapper {
+  margin-bottom: 26px;
+
+  @include tablet {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+  }
+}
+
+.promo__image {
+  margin: 0 auto;
+}
+
+// Info
+
+.promo__info {
+  display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    width: 292px;
+  }
+
+  @include desktop {
+    margin-left: 175px;
+    margin-bottom: 73px;
+  }
+}
+
+// Price
 
 .promo__price {
   font-weight: 700;
   font-size: 17px;
   line-height: 24px;
   color: $basic-dark-gray;
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
 
   @include tablet {
-    grid-row: 4/5;
+    margin-bottom: 33px;
+    font-size: 20px;
   }
 }
 
-.promo__image {
-  @include tablet {
-    grid-column: 2/2;
-    grid-row: -5/-2;
-    align-self: center;
-  }
-}
-
-/* Button */
+// Button
 
 .promo__buy {
-  padding: 16px 70px;
+  width: 100%;
 }

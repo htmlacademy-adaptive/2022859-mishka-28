@@ -5,12 +5,42 @@
   @include overlay;
   display: flex;
   flex-direction: row;
-  padding-left: 89px;
-  padding-right: 89px;
+  align-items: center;
+  padding: 27px 62px 25px 59px;
+  border-bottom: 1px solid #e5e5e5;
+
+  @include tablet {
+    padding: 0;
+    border-bottom: none;
+  }
 }
 
 /* Item */
 
-// .social__item {
+.social__item {
+  cursor: pointer;
+  margin-right: 29px;
 
-// }
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #271ac0;
+  }
+}
+
+
+// Icon
+
+.social__link-icon {
+  color: $basic-black;
+
+  &:hover {
+    color: #46c1ae;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
