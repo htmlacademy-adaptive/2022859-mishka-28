@@ -50,6 +50,7 @@
 
   @include tablet {
     flex-direction: row;
+    column-gap: 49px;
   }
 
   @include desktop {
@@ -67,29 +68,18 @@
   display: flex;
   flex-direction: row;
   margin-bottom: 40px;
+  gap: 34px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @include tablet {
-    margin-right: 63px;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    gap: 25px;
   }
 
   @include desktop {
-    margin-right: 0;
-  }
-}
-
-.contacts__address dt {
-  width: 30%;
-
-  @include tablet {
-    width: 36%;
-  }
-
-  @include desktop {
-    padding-right: 23px;
+    gap: 22px;
   }
 }
 
