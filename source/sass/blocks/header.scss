@@ -163,7 +163,7 @@
     @include tablet {
       background-image: url("..//..//img/hero-tablet.jpg");
       padding-bottom: 372px;
-      background-position: 50% -60px;
+      background-position: top;
 
       @media (min-resolution: 2dppx) {
         background-image: url("..//..//img/hero-tablet@2x.png");
@@ -176,6 +176,7 @@
       background-size: cover;
       padding-top: 94px;
       padding-bottom: 359px;
+      background-position: 50% -60px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("..//..//img/hero-desktop@2x.jpg");
