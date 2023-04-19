@@ -16,7 +16,7 @@
 
   @include desktop {
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -50,7 +50,7 @@
   }
 
   @include desktop {
-    padding: 47px 110px 27px 79px;
+    padding: 47px 31px 27px 79px;
 
     &::before {
       left: 79px;
@@ -72,23 +72,12 @@
 
   @include desktop {
     margin-top: 27px;
+    margin-bottom: 28px;
+    padding-right: 30px;
   }
 }
 
 /* Description */
-
-.production__description-wrapper {
-  padding: 35px 13px 28px 33px;
-
-  @include tablet {
-    order: 2;
-    padding: 24px 17px 46px 40px;
-  }
-
-  @include desktop {
-    grid-column: 2/2;
-  }
-}
 
 .production__description {
   margin: 0;
@@ -109,4 +98,8 @@
 
 .production__button {
   width: 96%;
+
+  @include desktop {
+    width: 230px;
+  }
 }

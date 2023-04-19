@@ -160,12 +160,17 @@
   @include tablet {
     position: absolute;
     left: 50%;
-    top: 100px;
+    top: 160px;
+  }
+
+  @include desktop {
+    top: 56px;
   }
 }
 
 .promo__image {
   margin: 0 auto;
+  width: 100%;
 }
 
 // Info

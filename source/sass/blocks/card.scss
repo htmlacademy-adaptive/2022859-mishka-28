@@ -79,10 +79,6 @@
 
 /* Image */
 
-.card__images-link {
-  display: flex;
-}
-
 .card__content {
   position: relative;
   display: flex;
@@ -95,4 +91,8 @@
     padding-top: 27px;
     padding-right: 32px;
   }
+}
+
+.card__image {
+  width: 100%;
 }
