@@ -26,7 +26,11 @@
 
           <div class="header__logo-wrapper">
             <a class="header__logo" aria-label="Логотип">
-              <img src="img/mishka-logo-mobile.svg" width="86" height="35" decoding="async" alt="Логотип магазина Мишка">
+              <picture>
+                <source media="(min-width: 1068px)" srcset="img/mishka-logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/mishka-logo-tablet.svg">
+                <img src="img/mishka-logo-mobile.svg" width="86" height="35" decoding="async" alt="Логотип магазина Мишка">
+              </picture>
             </a>
             </div>
 
