@@ -3,7 +3,6 @@
 .header {
   position: relative;
   background-color: $basic-white;
-  box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
 
   @include tablet {
     background: linear-gradient($basic-white 88px, $basic-semi-gray 2px, transparent 90px);
@@ -163,6 +162,7 @@
     @include tablet {
       background-image: url("..//..//img/hero-tablet.jpg");
       padding-bottom: 372px;
+      padding-top: 108px;
       background-position: top;
 
       @media (min-resolution: 2dppx) {
@@ -197,9 +197,16 @@
 .header__title-wrapper-zigzag {
   @include tablet {
     background-image: url("..//..//img/zigzag-fill.svg");
-    height: 24px;
     background-repeat: repeat-x;
     background-position: 0 bottom;
+    background-size: auto 24px;
+    padding-top: 36px;
+    padding-bottom: 92px;
+  }
+
+  @include desktop {
+    padding-bottom: 118px;
+    background-size: auto 34px;
   }
 }
 
