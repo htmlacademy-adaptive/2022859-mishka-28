@@ -113,6 +113,17 @@
   @include tablet {
     width: 110px;
   }
+
+  @media (any-hover: hover) {
+    &:hover {
+      border: 2px solid rgb(68, 68, 68, 0.3);
+      cursor: pointer;
+    }
+  }
+
+  &:active {
+    border: 2px solid $basic-green;
+  }
 }
 
 .modal__item span {
