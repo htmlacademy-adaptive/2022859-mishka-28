@@ -4,8 +4,12 @@
   position: relative;
   border: 1px solid $basic-semi-gray;
 
+  @include tablet {
+    order: -1;
+  }
+
   @include desktop {
-    width: 682px;
+    min-width: 682px;
   }
 }
 
@@ -22,6 +26,15 @@
   transform: translate(-50%, -50%);
   border: none;
   background-color: transparent;
+  cursor: pointer;
+}
+
+.video__button svg {
+  width: 101px;
+
+  @media (any-hover: hover) {
+    width: 121px;
+  }
 }
 
 .video__image {

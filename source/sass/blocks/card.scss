@@ -11,6 +11,16 @@
   @include desktop {
     flex-direction: column;
   }
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Link */
@@ -87,6 +97,7 @@
   border: 1px solid $basic-semi-gray;
 
   @include tablet {
+    flex-grow: 1;
     padding-left: 34px;
     padding-top: 27px;
     padding-right: 32px;
