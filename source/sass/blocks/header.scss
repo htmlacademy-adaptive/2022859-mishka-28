@@ -222,7 +222,7 @@
     font-size: 43px;
     line-height: 50px;
     margin: 0 auto;
-    width: 70%;
+    width: 77%;
   }
 
   @include desktop {
@@ -232,38 +232,6 @@
   }
 }
 
-.header__additional-list {
-  display: none;
-
-  @include desktop {
-    @include overlay;
-    display: flex;
-    grid-column: 1/2;
-    grid-row: 2/2;
-    z-index: 3;
-    font-size: 15px;
-    max-width: 350px;
-  }
-}
-
-.header__additional-item {
-  @include desktop {
-    font-weight: 700;
-    line-height: 24px;
-    margin-right: 46px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.header__additional-link {
-  @include desktop {
-    text-decoration: none;
-    color: $basic-black;
-  }
-}
 
 .header__additional-text {
   display: none;
@@ -282,6 +250,8 @@
   }
 
   @include desktop {
+    grid-row: 1/1;
+    align-self: end;
     grid-column: 3/3;
   }
 }
