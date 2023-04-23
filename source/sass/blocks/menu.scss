@@ -30,6 +30,7 @@
   @include tablet {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
     max-width: 405px;
     font-size: 15px;
     grid-row: 2/2;
@@ -41,6 +42,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content;
+    justify-content: start;
     font-size: 17px;
     grid-row: 1/2;
     align-items: center;
@@ -55,11 +57,9 @@
   display: flex;
   font-weight: 700;
   line-height: 24px;
-  padding: 29px 32px 27px 46px;
   box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
 
   @include tablet {
-    padding: 0;
     background: none;
     box-shadow: none;
     text-align: center;
@@ -70,21 +70,6 @@
 
     &:active {
       opacity: 0.3;
-    }
-  }
-
-  &--catalog {
-    @include desktop {
-      padding-top: 32px;
-      padding-bottom: 32px;
-      padding-right: 41px;
-      border-right: 1px solid $basic-semi-gray;
-    }
-  }
-
-  &--form {
-    @include desktop {
-      justify-content: center;
     }
   }
 }
@@ -102,6 +87,38 @@
 .menu__link {
   color: $basic-black;
   text-decoration: none;
+  padding: 29px 32px 27px 46px;
+  width: 100%;
+
+  @include tablet {
+    padding: 0;
+    text-align: left;
+  }
+
+  @include desktop {
+    padding-top: 33px;
+    padding-bottom: 31px;
+  }
+
+  &--catalog {
+    @include desktop {
+      border-right: 1px solid $basic-semi-gray;
+    }
+  }
+
+  &--form {
+    @include desktop {
+      text-align: center;
+    }
+  }
+}
+
+.menu__link-additional {
+  padding: 0;
+
+  &--sale {
+    padding-left: 25px;
+  }
 }
 
 /*Button */
@@ -132,6 +149,7 @@
   @include tablet {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
     grid-column: 2/2;
     grid-row: 1/2;
@@ -154,17 +172,31 @@
 .user-list__item {
   box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
   margin-right: 0;
+  min-height: 60px;
 
   @include tablet {
     box-shadow: none;
-    padding-bottom: 32px;
-    padding-top: 32px;
-    padding-left: 33px;
+    height: 88px;
   }
 }
 
 .user-list__link {
-  text-align: right;
+  text-align: left;
+  text-decoration: none;
+  width: 100%;
+
+  @include tablet {
+    padding: 35px 32px;
+  }
+
+  &--cart {
+    @include tablet {
+      padding-left: 31px;
+      padding-right: 0;
+      display: flex;
+      align-items: center;
+    }
+  }
 }
 
 .user-list__link-text {
@@ -172,7 +204,7 @@
   font-size: 17px;
   line-height: 24px;
   color: $basic-black;
-  margin-left: 26px;
+  margin-left: 23px;
 
   @include tablet {
     &--closed {
@@ -182,8 +214,6 @@
 }
 
 .user-list__item--search {
-  padding-right: 31px;
-
   @include tablet {
     border-left: 1px solid $basic-semi-gray;
     border-right: 1px solid $basic-semi-gray;
