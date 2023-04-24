@@ -117,12 +117,12 @@
     width: 137px;
     position: absolute;
     left: 75%;
-    top: 75%;
+    transform: translateY(-35px);
+    margin-bottom: 0;
   }
 
   @include desktop {
     left: 82%;
-    top: 62%;
   }
 }
 
@@ -144,12 +144,12 @@
   @include tablet {
     position: absolute;
     width: 230px;
-    bottom: 73%;
+    top: 0;
+    transform: translateY(83px);
     left: 63%;
   }
 
   @include desktop {
-    bottom: 72%;
     left: 75%;
   }
 }

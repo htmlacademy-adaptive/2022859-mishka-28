@@ -21,7 +21,7 @@
   }
 
   @include desktop {
-    grid-template-columns: 316px 315px 316px;
+    grid-template-columns: repeat(3, 1fr);
     gap: 51px;
   }
 }

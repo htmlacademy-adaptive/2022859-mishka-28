@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/ico" href="/favicon.ico">
+    <link rel="icon" type="image/ico" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/icons/favicon-16x16.png">
@@ -276,7 +276,7 @@
     </footer>
 
     <!-- Модальное окно -->
-      <div class="modal modal--open">
+      <div class="modal">
         <div class="modal__inner">
           <div class="modal__text">
             <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
@@ -286,14 +286,26 @@
             <form class="modal__form" action="" method="post">
               <input type="hidden">
               <ul class="modal__list">
-                <li class="modal__item modal__item--active">
-                  <span>S</span>
+                <li class="modal__item">
+                  <label class="modal__label">
+                    <input class="visually-hidden modal__input" type="radio" name="size" id="S" checked>
+                    <span class="modal__input-mark"></span>
+                    <span class="modal__lable-text">S</span>
+                  </label>
                 </li>
                 <li class="modal__item">
-                  <span>M</span>
+                  <label class="modal__label">
+                    <input class="visually-hidden modal__input" type="radio" name="size" id="M">
+                    <span class="modal__input-mark"></span>
+                    <span class="modal__lable-text">M</span>
+                  </label>
                 </li>
                 <li class="modal__item">
-                  <span>L</span>
+                  <label class="modal__label">
+                    <input class="visually-hidden modal__input" type="radio" name="size" id="L">
+                    <span class="modal__input-mark"></span>
+                    <span class="modal__lable-text">L</span>
+                  </label>
                 </li>
               </ul>
               <button class="modal__button" type="submit">Добавить</button>
