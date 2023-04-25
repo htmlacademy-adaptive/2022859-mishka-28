@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="/source/fonts/opensans.woff2" as="font" type="font/woff2">
+    <link rel="preload" href="/source/fonts/opensansbold.woff2" as="font" type="font/woff2">
     <link rel="icon" type="image/ico" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="./img/icons/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/icons/favicon-32x32.png">
@@ -34,13 +36,11 @@
             </a>
             </div>
 
-        <button class="menu__toggle" type="button" aria-expanded="false" aria-controls="menu__list">
-          <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M20 0H0V2H20V0Z" fill="#231F20"/>
-            <path d="M20 6H0V8H20V6Z" fill="#231F20"/>
-            <path d="M20 12H0V14H20V12Z" fill="#231F20"/>
-            </svg>
-          <span class="visually-hidden">Открыть меню</span>
+        <button class="menu__toggle" type="button" aria-expanded="false" aria-controls="menu__list" aria-label="Открыть меню">
+          <svg class="menu__icon" width="25" height="25">
+            <use class="menu__icon-menu" href="img/sprite.svg#menu"></use>
+            <use class="menu__icon-cross" href="img/sprite.svg#cross"></use>
+          </svg>
         </button>
         <ul class="menu__list" id="menu__list">
           <li class="menu__item">
