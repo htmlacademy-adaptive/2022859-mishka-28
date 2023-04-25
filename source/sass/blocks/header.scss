@@ -92,7 +92,6 @@
   text-align: center;
   z-index: 1;
   margin: 0 auto;
-  cursor: pointer;
 
   @include tablet {
     text-align: left;
@@ -105,9 +104,14 @@
     text-align: center;
     margin: 0 auto;
   }
+}
 
-  &:hover {
-    opacity: 0.6;
+.header__logo-wrapper a[href] {
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+      cursor: pointer;
+    }
   }
 
   &:focus-visible {
