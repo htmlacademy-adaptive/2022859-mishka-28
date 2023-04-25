@@ -3,7 +3,6 @@
 .header {
   position: relative;
   background-color: $basic-white;
-  box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
 
   @include tablet {
     background: linear-gradient($basic-white 88px, $basic-semi-gray 2px, transparent 90px);
@@ -90,16 +89,12 @@
 }
 
 .header__logo {
-  width: 86px;
-  height: 35px;
   text-align: center;
   z-index: 1;
   margin: 0 auto;
   cursor: pointer;
 
   @include tablet {
-    width: 114px;
-    height: 46px;
     text-align: left;
     margin: 0;
   }
@@ -107,11 +102,8 @@
   @include desktop {
     display: flex;
     justify-content: center;
-    width: 149px;
-    height: 72px;
     text-align: center;
     margin: 0 auto;
-    padding-top: 9px;
   }
 
   &:hover {
@@ -130,6 +122,16 @@
 .header__logo img {
   width: 86px;
   height: 35px;
+
+  @include tablet {
+    width: 114px;
+    height: 46px;
+  }
+
+  @include desktop {
+    width: 149px;
+    height: 72px;
+  }
 }
 
 /* Title */
@@ -147,18 +149,38 @@
   }
 
   &--index {
-    background-image: url("../../img/hero-mobile@2x\ 1.jpg");
-    background-size: cover;
+    background-image: url("..//..//img/hero-mobile.jpg");
     background-repeat: no-repeat;
     background-position: center -18px;
     padding-bottom: 120px;
 
+    @media (min-resolution: 2dppx) {
+      background-image: url("..//..//img/hero-mobile@2x.jpg");
+      background-size: 320px auto;
+    }
+
     @include tablet {
+      background-image: url("..//..//img/hero-tablet.jpg");
       padding-bottom: 372px;
+      padding-top: 108px;
+      background-position: top;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("..//..//img/hero-tablet@2x.png");
+        background-size: 768px auto;
+      }
     }
 
     @include desktop {
-      padding-bottom: 355px;
+      background-image: url("..//..//img/hero-desktop.jpg");
+      background-size: cover;
+      padding-top: 94px;
+      padding-bottom: 359px;
+      background-position: 50% -60px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("..//..//img/hero-desktop@2x.jpg");
+      }
     }
   }
 
@@ -175,9 +197,16 @@
 .header__title-wrapper-zigzag {
   @include tablet {
     background-image: url("..//..//img/zigzag-fill.svg");
-    height: 24px;
     background-repeat: repeat-x;
     background-position: 0 bottom;
+    background-size: auto 24px;
+    padding-top: 36px;
+    padding-bottom: 92px;
+  }
+
+  @include desktop {
+    padding-bottom: 118px;
+    background-size: auto 34px;
   }
 }
 
@@ -193,7 +222,7 @@
     font-size: 43px;
     line-height: 50px;
     margin: 0 auto;
-    width: 70%;
+    width: 77%;
   }
 
   @include desktop {
@@ -203,38 +232,6 @@
   }
 }
 
-.header__additional-list {
-  display: none;
-
-  @include desktop {
-    @include overlay;
-    display: flex;
-    grid-column: 1/2;
-    grid-row: 2/2;
-    z-index: 3;
-    font-size: 15px;
-    max-width: 350px;
-  }
-}
-
-.header__additional-item {
-  @include desktop {
-    font-weight: 700;
-    line-height: 24px;
-    margin-right: 46px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-}
-
-.header__additional-link {
-  @include desktop {
-    text-decoration: none;
-    color: $basic-black;
-  }
-}
 
 .header__additional-text {
   display: none;
@@ -253,6 +250,8 @@
   }
 
   @include desktop {
+    grid-row: 1/1;
+    align-self: end;
     grid-column: 3/3;
   }
 }

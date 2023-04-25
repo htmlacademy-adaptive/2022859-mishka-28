@@ -9,6 +9,10 @@
     background-repeat: no-repeat;
     background-size: 350px 457px;
     padding-bottom: 116px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("..//..//img/review@2x.jpg");
+    }
   }
 
   @include desktop {
@@ -113,12 +117,12 @@
     width: 137px;
     position: absolute;
     left: 75%;
-    top: 75%;
+    transform: translateY(-35px);
+    margin-bottom: 0;
   }
 
   @include desktop {
     left: 82%;
-    top: 62%;
   }
 }
 
@@ -127,10 +131,21 @@
   padding: 13px 30px;
   background-color: transparent;
   border: 1px solid $basic-semi-gray;
+  cursor: pointer;
 
   @include tablet {
     padding: 0;
     border: none;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -140,12 +155,12 @@
   @include tablet {
     position: absolute;
     width: 230px;
-    bottom: 73%;
+    top: 0;
+    transform: translateY(83px);
     left: 63%;
   }
 
   @include desktop {
-    bottom: 72%;
     left: 75%;
   }
 }

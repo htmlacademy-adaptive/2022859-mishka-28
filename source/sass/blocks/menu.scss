@@ -5,7 +5,7 @@
 
   @include tablet {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: min-content;
     row-gap: 21px;
   }
 
@@ -13,8 +13,8 @@
     max-width: 1050px;
     width: 100%;
     grid-template-columns: 1fr 150px 1fr;
-    row-gap: 19px;
     justify-self: center;
+    row-gap: 0;
   }
 }
 
@@ -28,9 +28,9 @@
   display: none;
 
   @include tablet {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
     max-width: 405px;
     font-size: 15px;
     grid-row: 2/2;
@@ -39,9 +39,14 @@
   }
 
   @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: min-content;
+    justify-content: start;
     font-size: 17px;
     grid-row: 1/2;
     align-items: center;
+    row-gap: 19px;
   }
 }
 
@@ -49,45 +54,87 @@
 /* Item */
 
 .menu__item {
+  display: flex;
   font-weight: 700;
   line-height: 24px;
-  padding: 29px 32px 27px 46px;
   box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
 
   @include tablet {
-    padding: 0;
     background: none;
     box-shadow: none;
-    margin-right: 37px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
+    text-align: center;
   }
 }
 
-.menu__item--catalog {
+.menu__item-additional {
+  display: none;
+
   @include desktop {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-right: 41px;
-    border-right: 1px solid $basic-semi-gray;
+    display: flex;
+    font-size: 15px;
   }
 }
-
 /* Link */
 
 .menu__link {
   color: $basic-black;
   text-decoration: none;
+  padding: 29px 32px 27px 46px;
+  width: 100%;
+
+  @include tablet {
+    padding: 0;
+    text-align: left;
+  }
+
+  @include desktop {
+    padding-top: 33px;
+    padding-bottom: 31px;
+  }
+
+  &--catalog {
+    @include desktop {
+      border-right: 1px solid $basic-semi-gray;
+    }
+  }
+
+  &--form {
+    @include desktop {
+      text-align: center;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: rgb(68, 68, 68, 0.6);
+    }
+  }
+
+  &:active {
+    color: rgb(68, 68, 68, 0.3);
+  }
+}
+
+.menu__link-icon {
+  opacity: 0.2;
+}
+
+.menu__link:hover .menu__link-icon {
+  color: $basic-green;
+  opacity: 1;
+}
+
+.menu__link:active .menu__link-icon {
+  color: $basic-green;
+  opacity: 0.3;
+}
+
+.menu__link-additional {
+  padding: 0;
+
+  &--sale {
+    padding-left: 25px;
+  }
 }
 
 /*Button */
@@ -118,17 +165,21 @@
   @include tablet {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: wrap;
     grid-column: 2/2;
     grid-row: 1/2;
     font-size: 15px;
     background: none;
     justify-self: end;
-    max-width: 350px;
+    width: 350px;
     z-index: 3;
   }
 
   @include desktop {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: min-content 1fr;
     grid-column: 3/3;
     min-height: 88px;
   }
@@ -137,17 +188,36 @@
 .user-list__item {
   box-shadow: 0 1px 0 $basic-semi-gray, inset 0 1px 0 $basic-semi-gray;
   margin-right: 0;
+  min-height: 60px;
 
   @include tablet {
     box-shadow: none;
-    padding-bottom: 32px;
-    padding-top: 32px;
-    padding-left: 33px;
+    height: 88px;
   }
 }
 
 .user-list__link {
-  text-align: right;
+  text-align: left;
+  width: 100%;
+
+  @include tablet {
+    padding: 35px 32px;
+  }
+
+  &--cart {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: $basic-black;
+
+    @include tablet {
+      padding-left: 31px;
+      padding-right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }
 
 .user-list__link-text {
@@ -155,7 +225,6 @@
   font-size: 17px;
   line-height: 24px;
   color: $basic-black;
-  margin-left: 26px;
 
   @include tablet {
     &--closed {
@@ -165,8 +234,6 @@
 }
 
 .user-list__item--search {
-  padding-right: 31px;
-
   @include tablet {
     border-left: 1px solid $basic-semi-gray;
     border-right: 1px solid $basic-semi-gray;

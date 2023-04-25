@@ -11,6 +11,16 @@
   @include desktop {
     flex-direction: column;
   }
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  }
 }
 
 /* Link */
@@ -36,6 +46,17 @@
 .card__title-link {
   text-decoration: none;
   margin-bottom: 5px;
+  cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 /* Description */
@@ -48,10 +69,6 @@
   color: $basic-dark-gray;
   margin-bottom: 41px;
 
-  @include tablet {
-    font-size: 15px;
-  }
-
   &::after {
     content: "";
     background-color: $basic-semi-gray;
@@ -61,6 +78,45 @@
     transform: translateY(-50%);
     left: 28px;
     right: 28px;
+  }
+
+  @include tablet {
+    font-size: 15px;
+
+    &::after {
+      top: 75%;
+    }
+  }
+
+  @include desktop {
+    &::after {
+      top: 64%;
+    }
+  }
+}
+
+// Link
+
+.card__link-wrapper {
+  display: flex;
+  margin-top: auto;
+}
+
+.card__link {
+  margin-left: auto;
+}
+
+.card__link svg {
+  color: rgb(0, 0, 0, 0.2);
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $basic-green;
+    }
+  }
+
+  &:active {
+    color: rgb(99, 209, 187, 0.3);
   }
 }
 
@@ -73,15 +129,10 @@
 
   @include tablet {
     font-size: 17px;
-    margin-top: auto;
   }
 }
 
 /* Image */
-
-.card__images-link {
-  display: flex;
-}
 
 .card__content {
   position: relative;
@@ -91,8 +142,13 @@
   border: 1px solid $basic-semi-gray;
 
   @include tablet {
+    flex-grow: 1;
     padding-left: 34px;
     padding-top: 27px;
     padding-right: 32px;
   }
+}
+
+.card__image {
+  width: 100%;
 }
