@@ -10,6 +10,7 @@
 
   @include desktop {
     min-width: 682px;
+    grid-row: 1/3;
   }
 }
 

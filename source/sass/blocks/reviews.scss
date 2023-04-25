@@ -131,10 +131,21 @@
   padding: 13px 30px;
   background-color: transparent;
   border: 1px solid $basic-semi-gray;
+  cursor: pointer;
 
   @include tablet {
     padding: 0;
     border: none;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 

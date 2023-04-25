@@ -63,14 +63,6 @@
     background: none;
     box-shadow: none;
     text-align: center;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
   }
 }
 
@@ -111,6 +103,30 @@
       text-align: center;
     }
   }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: rgb(68, 68, 68, 0.6);
+    }
+  }
+
+  &:active {
+    color: rgb(68, 68, 68, 0.3);
+  }
+}
+
+.menu__link-icon {
+  opacity: 0.2;
+}
+
+.menu__link:hover .menu__link-icon {
+  color: $basic-green;
+  opacity: 1;
+}
+
+.menu__link:active .menu__link-icon {
+  color: $basic-green;
+  opacity: 0.3;
 }
 
 .menu__link-additional {
@@ -182,7 +198,6 @@
 
 .user-list__link {
   text-align: left;
-  text-decoration: none;
   width: 100%;
 
   @include tablet {
@@ -190,11 +205,17 @@
   }
 
   &--cart {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: $basic-black;
+
     @include tablet {
       padding-left: 31px;
       padding-right: 0;
       display: flex;
       align-items: center;
+      justify-content: space-between;
     }
   }
 }
@@ -204,7 +225,6 @@
   font-size: 17px;
   line-height: 24px;
   color: $basic-black;
-  margin-left: 23px;
 
   @include tablet {
     &--closed {
