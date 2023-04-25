@@ -132,8 +132,12 @@
   border: 2px solid rgb(68, 68, 68, 0.1);
 }
 
+.modal__input:hover + .modal__input-mark {
+  border-color: rgb(68, 68, 68, 0.3);
+}
+
 .modal__input:checked + .modal__input-mark {
-  border: 2px solid $basic-green;
+  border-color: $basic-green;
 }
 
 // Button
