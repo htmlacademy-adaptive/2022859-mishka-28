@@ -120,6 +120,10 @@
   &--mail {
     width: 100%;
     row-gap: 35px;
+
+    @include desktop {
+      width: 826px;
+    }
   }
 }
 
