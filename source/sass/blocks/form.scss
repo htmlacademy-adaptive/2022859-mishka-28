@@ -179,10 +179,12 @@
   }
 
   &--checkbox {
-    row-gap: 23px;
-
     @include tablet {
       grid-template-columns: 1fr 1fr;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
@@ -397,8 +399,10 @@
     cursor: pointer;
     background-color: $basic-white;
 
-    &:hover {
-      border: 2px solid $basic-green;
+    @media (any-hover: hover) {
+      &:hover {
+        border: 2px solid $basic-green;
+      }
     }
 
     &:active {
@@ -412,18 +416,12 @@
     }
   }
 
-  @media (any-hover: hover) {
-    &:hover {
-      border: 2px solid $basic-green;
-    }
+  &:disabled + span {
+    border-color: rgba(150, 149, 149);
   }
 
   &:focus-visible + span {
     border-color: $basic-green;
-  }
-
-  &:active {
-    border: 2px solid rgba(68, 68, 68, 0.3);
   }
 }
 
@@ -457,20 +455,24 @@
       width: 52px;
       height: 52px;
     }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $basic-green;
+      }
+    }
+
+    &:active {
+      border-color: rgba(68, 68, 68, 0.3);
+    }
   }
 
-  @media (any-hover: hover) {
-    &:hover {
-      border: 2px solid $basic-green;
-    }
+  &:disabled + span {
+    border-color: rgba(150, 149, 149);
   }
 
   &:focus-visible + span {
     border-color: $basic-green;
-  }
-
-  &:active {
-    border: 2px solid rgba(68, 68, 68, 0.3);
   }
 }
 
