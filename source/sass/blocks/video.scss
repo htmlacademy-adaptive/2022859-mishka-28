@@ -25,9 +25,23 @@
   width: 101px;
   height: 76px;
   transform: translate(-50%, -50%);
+  transition: 0ms;
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.2);
+      transition: 300ms;
+    }
+  }
+
+  &:active {
+    transform: translate(-50%, -50%) scale(0.8);
+    transition: 259ms ease-in;
+    opacity: 0.3;
+  }
 }
 
 .video__button svg {
