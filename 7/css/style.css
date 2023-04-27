@@ -682,6 +682,7 @@ img {
   background-color: #63d1bb;
   cursor: pointer;
   transform: translateY(0);
+  transition: 200ms;
 }
 @media (min-width: 768px) {
   .categories__link {
@@ -2442,8 +2443,8 @@ img {
   padding: 0;
   width: 101px;
   height: 76px;
-  transform: translate(-50%, -50%);
-  transition: 0ms;
+  transform: translate(-50%, -50%) scale(1);
+  transition: 200ms;
   border: none;
   background-color: transparent;
   cursor: pointer;
