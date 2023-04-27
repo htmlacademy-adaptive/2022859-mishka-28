@@ -6,6 +6,12 @@
   padding-bottom: 55px;
 }
 
+.form-main__wrapper {
+  @include desktop {
+    padding: 0 225px;
+  }
+}
+
 /* Group */
 
 .form__group {
@@ -31,6 +37,10 @@
 }
 
 .form__group-wrapper {
+  @include desktop {
+    padding: 0 97px;
+  }
+
   &--gray {
     @include tablet {
       background-color: #f1f1f1;
@@ -65,6 +75,7 @@
 }
 
 .form__field {
+  position: relative;
   display: flex;
   flex-direction: column;
   margin: 0;
@@ -72,6 +83,23 @@
   @include tablet {
     flex-direction: row;
     align-items: center;
+  }
+}
+
+.form__input-icon {
+  position: absolute;
+  right: 0;
+  bottom: 17px;
+  opacity: 0.2;
+
+  @include tablet {
+    right: 26px;
+  }
+
+  @include desktop {
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -94,7 +122,7 @@
     row-gap: 35px;
 
     @include desktop {
-      width: 828px;
+      width: 826px;
     }
   }
 }
@@ -135,6 +163,10 @@
       display: none;
     }
   }
+
+  @include tablet {
+    width: 14%;
+  }
 }
 
 /* List */
@@ -151,10 +183,12 @@
   }
 
   &--checkbox {
-    row-gap: 23px;
-
     @include tablet {
       grid-template-columns: 1fr 1fr;
+    }
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr 1fr;
     }
   }
 }
@@ -230,22 +264,26 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
-  color: inherit;
+  color: $basic-dark-gray;
   padding-bottom: 17px;
   padding-top: 16px;
   padding-right: 10px;
   border: none;
-  box-shadow: inset 0 -2px 0 $basic-black;
+  border-bottom: 2px solid $basic-black;
+  flex-grow: 1;
 
   @include tablet {
     font-size: 19px;
     padding: 16px 127px 16px 18px;
-    flex-grow: 1;
   }
 
   &--phone {
     @include tablet {
       background-color: #f1f1f1;
+    }
+
+    @include desktop {
+      width: 700px;
     }
   }
 
@@ -253,17 +291,36 @@
     @include tablet {
       background-color: #f1f1f1;
     }
+
+    @include desktop {
+      width: 700px;
+    }
   }
 
   @media (any-hover: hover) {
     &:hover {
-      box-shadow: inset 0 -2px 0 $basic-green;
+      border-bottom-color: $basic-green;
     }
   }
 
-  &:focus {
-    outline: none;
+  &:focus-visible {
+    outline: 2px solid $basic-green;
   }
+
+
+  &:not(:placeholder-shown) {
+    border-bottom: 2px solid $basic-green;
+  }
+}
+
+.form__input:hover + svg {
+  color: $basic-green;
+  opacity: 1;
+}
+
+.form__input:not(:placeholder-shown) + svg {
+  color: $basic-green;
+  opacity: 1;
 }
 
 
@@ -274,7 +331,7 @@
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
-  color: inherit;
+  color: $basic-dark-gray;
   height: 142px;
 
   @include tablet {
@@ -284,6 +341,21 @@
 
   @include desktop {
     max-width: 700px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      border-color: $basic-green;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-color: $basic-green;
+  }
+
+  &:not(:placeholder-shown) {
+    border-color: $basic-green;
   }
 }
 
@@ -331,12 +403,10 @@
     cursor: pointer;
     background-color: $basic-white;
 
-    &:hover {
-      border: 2px solid $basic-green;
-    }
-
-    &:focus-visible {
-      outline: 2px solid #0707d8;
+    @media (any-hover: hover) {
+      &:hover {
+        border: 2px solid $basic-green;
+      }
     }
 
     &:active {
@@ -348,6 +418,14 @@
       height: 52px;
       background-color: #f1f1f1;
     }
+  }
+
+  &:disabled + span {
+    border-color: rgba(150, 149, 149);
+  }
+
+  &:focus-visible + span {
+    border-color: $basic-green;
   }
 }
 
@@ -381,6 +459,24 @@
       width: 52px;
       height: 52px;
     }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $basic-green;
+      }
+    }
+
+    &:active {
+      border-color: rgba(68, 68, 68, 0.3);
+    }
+  }
+
+  &:disabled + span {
+    border-color: rgba(150, 149, 149);
+  }
+
+  &:focus-visible + span {
+    border-color: $basic-green;
   }
 }
 
