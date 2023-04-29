@@ -46,7 +46,7 @@ const scripts = () => {
 
 // Images
 
-const optimizeImages = () => {
+export const optimizeImages = () => {
   return gulp.src('source/img/*.{png,jpg}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
@@ -133,38 +133,30 @@ const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
   gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/img/icons/*.svg').on('change', svg, browser.reload);
 }
 
 // Build
 
-export const build = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    svg,
-    sprite,
-    createWebp
-  ),
-);
+  export const build = gulp.series(
+    clean,
+    copy,
+    copyImages,
+    gulp.parallel(
+      styles,
+      html,
+      scripts,
+      svg,
+      sprite,
+      createWebp
+    ),
+  );
 
 
-export default gulp.series(
-  clean,
-  copy,
-  copyImages,
-  gulp.parallel(
-    styles,
-    html,
-    scripts,
-    svg,
-    sprite,
-    createWebp
-  ),
-  gulp.series(
-    server,
-    watcher
-  ));
+  export default gulp.series(
+    build,
+    gulp.series(
+      server,
+      watcher
+    ));
+
