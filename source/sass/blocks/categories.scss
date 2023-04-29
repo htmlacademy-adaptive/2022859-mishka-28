@@ -12,7 +12,7 @@
       content: "";
       position: absolute;
       display: block;
-      top: 87%;
+      top: 90%;
       width: 100%;
       height: 24px;
       background-image: url("..//..//img/zigzag-fill.svg");
@@ -22,7 +22,7 @@
 
   @include desktop {
     &::after {
-      top: 82%;
+      top: 85%;
       height: 34px;
       background-size: 1250px;
     }
@@ -96,6 +96,12 @@
       right: 36px;
       top: 24px;
     }
+
+    @include tablet {
+      &::after {
+        top: 30px;
+      }
+    }
   }
 
   &--toy {
@@ -107,6 +113,13 @@
       height: 60px;
       top: 20px;
       right: 28px;
+    }
+
+    @include tablet {
+      &::after {
+        top: 32px;
+        right: 33px;
+      }
     }
   }
 

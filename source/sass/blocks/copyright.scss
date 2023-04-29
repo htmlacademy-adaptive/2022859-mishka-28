@@ -6,6 +6,9 @@
   justify-content: space-between;
   min-height: 40px;
   padding: 20px 43px 23px 39px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
 
   @include tablet {
     padding: 0;
@@ -13,18 +16,25 @@
   }
 }
 
-.copyright__text {
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 18px;
-}
-
 // Link
 
 .copyright__link {
   display: flex;
   text-decoration: none;
+  align-items: center;
   color: $basic-black;
+  cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover .copyright__link-icon {
+      color: #46c1ae;
+    }
+  }
+
+
+  &:active .copyright__link-icon {
+    opacity: 0.3;
+  }
 }
 
 // Icon
@@ -33,12 +43,5 @@
   color: $basic-green;
   width: 27px;
   height: 35px;
-
-  &:hover {
-    color: #46c1ae;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+  margin-left: 24px;
 }

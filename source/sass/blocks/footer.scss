@@ -15,10 +15,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding-top: 51px;
+    padding-top: 47px;
     padding-bottom: 58px;
     padding-right: 50px;
     padding-left: 50px;
+  }
+
+  @include desktop {
+    padding-top: 49px;
   }
 }
 

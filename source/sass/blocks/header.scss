@@ -141,7 +141,7 @@
 /* Title */
 
 .header__title-wrapper {
-  padding: 77px 30px;
+  padding: 74px 30px;
   background-color: #f9f9f9;
 
   @include tablet {
@@ -166,8 +166,8 @@
     @include tablet {
       background-image: url("..//..//img/hero-tablet.jpg");
       padding-bottom: 372px;
-      padding-top: 108px;
-      background-position: top;
+      padding-top: 110px;
+      background-position: center -45px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("..//..//img/hero-tablet@2x.png");
@@ -178,9 +178,9 @@
     @include desktop {
       background-image: url("..//..//img/hero-desktop.jpg");
       background-size: cover;
-      padding-top: 94px;
-      padding-bottom: 359px;
-      background-position: 50% -60px;
+      padding-top: 114px;
+      padding-bottom: 355px;
+      background-position: 50% -44px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("..//..//img/hero-desktop@2x.jpg");
