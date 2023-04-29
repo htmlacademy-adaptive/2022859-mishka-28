@@ -47,20 +47,20 @@ const scripts = () => {
 // Images
 
 const optimizeImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/*.{png,jpg}')
   .pipe(squoosh())
   .pipe(gulp.dest('build/img'))
 }
 
 const copyImages = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/**/*.{png,jpg,svg}')
   .pipe(gulp.dest('build/img'))
 }
 
 // WebP
 
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{png,jpg}')
+  return gulp.src('source/img/*.{png,jpg}')
   .pipe(squoosh({
     webp: {}
   }))
@@ -70,7 +70,7 @@ const createWebp = () => {
 // SVG
 
 const svg = () => {
-  return gulp.src(['sourcce/img/*.svg', '!source/img/icons/*.svg'])
+  return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 }
@@ -110,7 +110,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
