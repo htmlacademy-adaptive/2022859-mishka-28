@@ -4,7 +4,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding-bottom: 34px;
+  padding-bottom: 38px;
   padding-top: 44px;
 
   @include tablet {
@@ -14,7 +14,7 @@
 
   @include desktop {
     padding-top: 175px;
-    padding-bottom: 103px;
+    padding-bottom: 107px;
   }
 }
 
@@ -125,7 +125,7 @@
 .contacts__link {
   text-decoration: none;
   color: inherit;
-  border-bottom: 2px solid $basic-green;
+  border-bottom: 1px solid $basic-green;
 
   &:hover {
     color: #46c1ae;
@@ -136,6 +136,10 @@
   }
 
   @include tablet {
+    padding-bottom: 3px;
+  }
+
+  @include desktop {
     padding-bottom: 7px;
   }
 }
@@ -161,7 +165,7 @@
   margin-bottom: 42px;
 
   @include tablet {
-    margin-bottom: 54px;
+    margin-bottom: 57px;
   }
 
   @include desktop {

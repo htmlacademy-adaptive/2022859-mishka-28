@@ -2,6 +2,14 @@
 
 .production {
   padding-bottom: 58px;
+
+  @include tablet {
+    padding-bottom: 63px;
+  }
+
+  @include desktop {
+    padding-bottom: 105px;
+  }
 }
 
 .production__item {
@@ -37,7 +45,7 @@
     content: "";
     position: absolute;
     left: 32px;
-    top: 32px;
+    top: 34px;
     width: 32px;
     height: 22px;
     background-image: url("..//../img/video.svg");
@@ -50,8 +58,8 @@
     padding-left: 107px;
 
     &::before {
-      top: 42px;
-      left: 33px;
+      top: 40px;
+      left: 40px;
     }
   }
 
@@ -62,7 +70,7 @@
 
     &::before {
       left: 79px;
-      top: 32px;
+      top: 48px;
     }
   }
 }
@@ -80,7 +88,7 @@
   }
 
   @include desktop {
-    margin-top: 27px;
+    margin-top: 50px;
     padding-right: 30px;
   }
 }
@@ -88,18 +96,18 @@
 /* Description */
 
 .production__description-wrapper {
-  padding: 35px 32px 33px 34px;
+  padding: 35px 31px 33px 34px;
 
   @include tablet {
-    padding-top: 12px;
-    padding-left: 42px;
-    padding-right: 42px;
+    padding-top: 14px;
+    padding-left: 40px;
+    padding-right: 38px;
     padding-bottom: 46px;
   }
 
   @include desktop {
     grid-column: 2/2;
-    padding-top: 14px;
+    padding-top: 15px;
     padding-left: 80px;
     padding-right: 57px;
     padding-bottom: 60px;
@@ -112,11 +120,16 @@
   font-size: 13px;
   line-height: 24px;
   color: $basic-dark-gray;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 
   @include tablet {
     font-size: 15px;
     line-height: 30px;
+    margin-bottom: 41px;
+  }
+
+  @include desktop {
+    margin-bottom: 51px;
   }
 }
 

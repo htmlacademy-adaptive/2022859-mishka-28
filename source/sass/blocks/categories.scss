@@ -88,39 +88,8 @@
     position: absolute;
   }
 
-  &--interior {
-    &::after {
-      background-image: url("..//..//img/interior.svg");
-      width: 40px;
-      height: 62px;
-      right: 36px;
-      top: 24px;
-    }
-
-    @include tablet {
-      &::after {
-        top: 30px;
-      }
-    }
-  }
-
   &--toy {
     background-color: $basic-dark-green;
-
-    &::after {
-      background-image: url("..//..//img/toy.svg");
-      width: 60px;
-      height: 60px;
-      top: 20px;
-      right: 28px;
-    }
-
-    @include tablet {
-      &::after {
-        top: 32px;
-        right: 33px;
-      }
-    }
   }
 
   @media (any-hover: hover) {
@@ -132,5 +101,30 @@
     &:active {
       transform: translateY(-5px);
     }
+  }
+}
+
+.categories__link--interior::after {
+  background-image: url("..//..//img/interior.svg");
+  width: 40px;
+  height: 62px;
+  right: 36px;
+  top: 24px;
+
+  @include tablet {
+    top: 30px;
+  }
+}
+
+.categories__link--toy::after {
+  background-image: url("..//..//img/toy.svg");
+  width: 60px;
+  height: 60px;
+  top: 20px;
+  right: 28px;
+
+  @include tablet {
+    top: 32px;
+    right: 33px;
   }
 }

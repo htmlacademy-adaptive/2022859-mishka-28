@@ -54,7 +54,7 @@
 
 .menu__link-icon {
   opacity: 0.2;
-  margin-right: 20px;
+  margin-right: 25px;
 
   @include tablet {
     margin-right: 0;
@@ -122,6 +122,10 @@
   }
 
   &--form {
+    @include tablet {
+      padding-left: 8px;
+    }
+
     @include desktop {
       text-align: center;
       padding-left: 25px;
@@ -143,7 +147,7 @@
   padding: 0;
 
   &--sale {
-    padding-left: 25px;
+    padding-left: 31px;
   }
 }
 
@@ -221,6 +225,7 @@
   padding-left: 32px;
   padding-right: 46px;
   display: flex;
+  align-items: center;
 
   @include tablet {
     padding: 35px 32px;
@@ -273,5 +278,9 @@
 
   @include tablet {
     flex-direction: row;
+  }
+
+  @include desktop {
+    display: grid;
   }
 }

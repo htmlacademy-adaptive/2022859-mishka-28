@@ -14,6 +14,11 @@
     padding: 0;
     width: 180px;
   }
+
+  @include desktop {
+    width: 184px;
+    align-items: baseline;
+  }
 }
 
 // Link
@@ -41,7 +46,6 @@
 
 .copyright__link-icon {
   color: $basic-green;
-  width: 27px;
-  height: 35px;
-  margin-left: 24px;
+  width: 82px;
+  height: 39px;
 }

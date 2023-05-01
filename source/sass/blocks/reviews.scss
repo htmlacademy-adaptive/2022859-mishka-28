@@ -2,7 +2,7 @@
 
 .reviews {
   position: relative;
-  padding-bottom: 42px;
+  padding-bottom: 45px;
 
   @include tablet {
     background-image: url("..//..//img/review-bg.jpg");
@@ -118,7 +118,7 @@
 
 .reviews__button-wrapper {
   display: flex;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 
   @include tablet {
     width: 185px;

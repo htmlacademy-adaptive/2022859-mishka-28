@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 <head>
-  <link rel="preload" href="./fonts/opensans.woff2" as="font" crossorigin="
-  " type="font/woff2">
+  <link rel="preload" href="./fonts/opensans.woff2" as="font" crossorigin="anonymous" type="font/woff2">
   <link rel="preload" href="./fonts/opensansbold.woff2" as="font" crossorigin="anonymous" type="font/woff2">
   <link rel="icon" type="image/ico" href="favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-icon-180x180.png">
@@ -25,6 +24,7 @@
   <header class="header header--bg">
     <div class="header__inner">
     <!-- Основное меню -->
+    <!-- модификатор  header__menu--nojs для открытия без js -->
     <nav class="header__menu menu header__menu--nojs">
 
         <div class="header__logo-wrapper">
@@ -79,7 +79,7 @@
       <p class="header__additional-text">Бесплатная доставка по России</p>
     </nav>
     </div>
-    <div class="header__title-wrapper header__title-wrapper-zigzag header__title-wrapper--catalog">
+    <div class="header__title-wrapper header__title-wrapper-zigzag header__title-wrapper-zigzag--inner header__title-wrapper--catalog">
       <h1 class="header__title header__title--catalog">Каталог товаров</h1>
     </div>
   </header>
@@ -191,7 +191,7 @@
           <a class="video__link" href="#">
             <picture>
               <source type="image/webp" media="(min-width: 1068px)" srcset="./img/video-desktop.webp 1x, ./img/video-desktop@2x.webp 2x">
-              <source type="image/webp" media="(min-width: 768px)" srcset="./img/video-tablet.webp 1x, ./img/video-mobile.webp@2x 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="./img/video-tablet.webp 1x, ./img/video-tablet@2x.webp 2x">
               <source type="image/webp" srcset="./img/video-mobile.webp 1x, ./img/video-mobile@2x.webp 2x">
               <source media="(min-width: 1068px)" srcset="./img/video-desktop.jpg 1x, ./img/video-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="./img/video-tablet.jpg 1x,  ./img/video-tablet@2x.jpg 2x">
@@ -247,14 +247,53 @@
 
 
   <div class="footer__copyright copyright">
-    <b class="copyright__text">Разработано</b>
     <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+      Разработано
       <svg class="copyright__link-icon"  width="27" height="35" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60"><path fill="currentColor" d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z"/></svg>
       <span class="visually-hidden">HTML Academy</span>
     </a>
   </div>
 </div>
 </footer>
-      <script src="./js/scripts.js"></script>
+
+  <!-- По классу modal__open открывает модалку -->
+  <div class="modal">
+    <div class="modal__inner">
+      <div class="modal__text">
+        <h2 class="modal__title">Добавить в&nbsp;корзину</h2>
+        <p class="modal__description">Выберите размер:</p>
+      </div>
+      <div class="modal__content">
+        <form class="modal__form" action="https://echo.htmlacademy.ru/" method="post">
+          <input type="hidden">
+          <ul class="modal__list">
+            <li class="modal__item">
+              <label class="modal__label">
+                <input class="visually-hidden modal__input" type="radio" name="size" value="S" checked>
+                <span class="modal__input-mark"></span>
+                <span class="modal__lable-text">S</span>
+              </label>
+            </li>
+            <li class="modal__item">
+              <label class="modal__label">
+                <input class="visually-hidden modal__input" type="radio" name="size" value="M">
+                <span class="modal__input-mark"></span>
+                <span class="modal__lable-text">M</span>
+              </label>
+            </li>
+            <li class="modal__item">
+              <label class="modal__label">
+                <input class="visually-hidden modal__input" type="radio" name="size" value="L">
+                <span class="modal__input-mark"></span>
+                <span class="modal__lable-text">L</span>
+              </label>
+            </li>
+          </ul>
+          <button class="modal__button" type="submit">Добавить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./js/scripts.js"></script>
 </body>
 </html>

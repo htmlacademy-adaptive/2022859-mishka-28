@@ -3,11 +3,11 @@
 .promo {
   position: relative;
   padding-top: 31px;
-  padding-bottom: 31px;
+  padding-bottom: 34px;
 
   @include tablet {
     padding-top: 53px;
-    padding-bottom: 50px;
+    padding-bottom: 54px;
   }
 
   @include desktop {
@@ -190,7 +190,7 @@
 
   @include desktop {
     margin-left: 175px;
-    margin-bottom: 70px;
+    margin-bottom: 74px;
   }
 }
 
