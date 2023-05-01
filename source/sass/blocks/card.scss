@@ -25,6 +25,12 @@
 
 /* Link */
 
+.card__images-link {
+  &:focus-visible {
+    outline: 2px solid $basic-lilac;
+  }
+}
+
 
 /* Title */
 
@@ -52,6 +58,10 @@
     &:hover {
       opacity: 0.6;
     }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $basic-lilac;
   }
 
   &:active {
@@ -106,6 +116,10 @@
 
 .card__link {
   margin-left: auto;
+
+  &:focus-visible {
+    outline: 2px solid $basic-lilac;
+  }
 }
 
 .card__link svg {

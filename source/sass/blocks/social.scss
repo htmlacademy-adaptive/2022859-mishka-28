@@ -24,9 +24,13 @@
   &:last-child {
     margin-right: 0;
   }
+}
 
+// Link
+
+.social__link {
   &:focus-visible {
-    outline: 2px solid #271ac0;
+    outline: 2px solid $basic-lilac;
   }
 }
 
@@ -36,8 +40,14 @@
 .social__link-icon {
   color: $basic-black;
 
-  &:hover {
-    color: #46c1ae;
+  @media (any-hover: hover) {
+    &:hover {
+      color: #46c1ae;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $basic-lilac;
   }
 
   &:active {
