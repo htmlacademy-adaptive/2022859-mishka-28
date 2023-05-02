@@ -22,7 +22,7 @@
 
   @include desktop {
     &::after {
-      top: 85%;
+      top: 82%;
       height: 34px;
       background-size: 1250px;
     }
@@ -79,7 +79,7 @@
   }
 
   @include desktop {
-    padding: 25px 350px 34px 36px;
+    padding: 25px 350px 38px 36px;
   }
 
   &::after {

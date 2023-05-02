@@ -156,6 +156,7 @@
 
   @include desktop {
     width: 698px;
+    row-gap: 18px;
   }
 
   &--mail {
@@ -207,10 +208,11 @@
     &::after {
       display: none;
     }
+  }
 
-    &--name {
-      width: 33%;
-    }
+  @include desktop {
+    width: 12%;
+    margin-left: 15px;
   }
 
   &--color {
@@ -225,11 +227,6 @@
     }
   }
 
-  @include desktop {
-    width: 12%;
-    margin-left: 15px;
-  }
-
   &--connection {
     margin-bottom: 7px;
 
@@ -241,7 +238,7 @@
     @include desktop {
       width: 14%;
       margin-bottom: 15px;
-      padding-top: 20px;
+      padding-top: 15px;
     }
   }
 
@@ -258,6 +255,17 @@
     @include tablet {
       width: 14%;
       padding-top: 7px;
+    }
+  }
+
+  &--name {
+    @include tablet {
+      width: 33%;
+    }
+
+    @include desktop {
+      padding-top: 26px;
+      width: 12%;
     }
   }
 }
@@ -363,6 +371,7 @@
 /* Input */
 
 .form__input {
+  font-family: inherit;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
@@ -379,6 +388,11 @@
     padding: 16px 127px 16px 18px;
   }
 
+  @include desktop {
+    padding-top: 18px;
+    padding-bottom: 13px;
+  }
+
   &--phone {
     @include tablet {
       background-color: #f1f1f1;
@@ -386,8 +400,9 @@
 
     @include desktop {
       width: 700px;
-      padding-top: 18px;
-      padding-bottom: 18px;
+      padding-top: 15px;
+      padding-bottom: 13px;
+      padding-left: 15px;
     }
   }
 
@@ -398,7 +413,7 @@
 
     @include desktop {
       width: 700px;
-      padding-top: 18px;
+      padding-top: 15px;
     }
   }
 
@@ -430,6 +445,7 @@
 
 
 .form__textarea {
+  font-family: inherit;
   resize: none;
   padding: 17px;
   border: 2px solid $basic-dark-gray;
@@ -562,8 +578,12 @@
   }
 }
 
-.form__checkbox-input:checked:disabled + .form__checkbox-input--control {
+.form__checkbox-input:disabled + .form__checkbox-input--control {
   background-color: #e3e3e3;
+}
+
+.form__checkbox-input:checked:disabled + .form__checkbox-input--control {
+  background-image: url("..//..//img/tick-disabled.svg");
 }
 
 .form__radiobox {
