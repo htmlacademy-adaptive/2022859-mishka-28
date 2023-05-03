@@ -58,11 +58,11 @@
   @include desktop {
     padding: 0 97px;
   }
+}
 
-  &--gray {
-    @include tablet {
-      background-color: #f1f1f1;
-    }
+.form__group-wrapper-gray {
+  @include tablet {
+    background-color: #f1f1f1;
   }
 }
 
