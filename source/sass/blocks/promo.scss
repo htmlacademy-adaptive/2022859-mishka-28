@@ -40,7 +40,7 @@
     flex-direction: row-reverse;
     max-width: 668px;
     padding-right: 0;
-    padding-top: 61px;
+    padding-top: 58px;
     z-index: 1;
     margin-bottom: 35px;
     margin-left: 32px;
@@ -59,6 +59,7 @@
 
   @include tablet {
     margin-top: 0;
+    margin-bottom: 8px;
     line-height: 17px;
     width: 100px;
     text-align: center;
@@ -169,7 +170,7 @@
   }
 
   @include desktop {
-    top: 71px;
+    top: -4px;
   }
 }
 

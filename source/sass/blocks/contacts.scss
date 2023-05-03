@@ -14,7 +14,7 @@
 
   @include desktop {
     padding-top: 175px;
-    padding-bottom: 107px;
+    padding-bottom: 105px;
   }
 }
 
@@ -34,7 +34,7 @@
 
   @include desktop {
     &::before {
-      top: 157px;
+      top: 0;
       left: 113px;
     }
   }
@@ -103,12 +103,14 @@
   }
 
   @include desktop {
-    gap: 22px;
+    margin-bottom: 25px;
   }
 }
 
 .contacts__address dt,
 .contacts__address dd {
+  display: flex;
+  flex-direction: column;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
@@ -126,6 +128,7 @@
   text-decoration: none;
   color: inherit;
   border-bottom: 1px solid $basic-green;
+  min-height: 27px;
 
   @media (any-hover: hover) {
     &:hover {
@@ -143,10 +146,6 @@
 
   @include tablet {
     padding-bottom: 3px;
-  }
-
-  @include desktop {
-    padding-bottom: 7px;
   }
 }
 
@@ -177,7 +176,7 @@
   @include desktop {
     position: absolute;
     left: 50%;
-    top: 98px;
+    top: 95px;
     margin-bottom: 0;
   }
 }

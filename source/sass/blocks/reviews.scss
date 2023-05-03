@@ -16,6 +16,8 @@
   }
 
   @include desktop {
+    width: 1150px;
+    margin: auto;
     padding-bottom: 163px;
     background-position: 50px 2px;
   }
@@ -35,7 +37,7 @@
     font-size: 43px;
     line-height: 50px;
     margin-bottom: 39px;
-    padding-top: 79px;
+    padding-top: 81px;
   }
 
   @include desktop {
@@ -168,7 +170,7 @@
     position: absolute;
     width: 175px;
     top: 0;
-    transform: translateY(74px);
+    transform: translateY(78px);
     left: 71%;
   }
 
