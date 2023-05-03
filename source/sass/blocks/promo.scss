@@ -13,6 +13,8 @@
   @include desktop {
     padding-top: 71px;
     padding-bottom: 0;
+    width: 1150px;
+    margin: auto;
   }
 }
 
@@ -31,7 +33,7 @@
   @include tablet {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-right: 13px;
     margin-bottom: 38px;
   }
@@ -58,11 +60,15 @@
   text-transform: uppercase;
 
   @include tablet {
-    margin-top: 0;
-    margin-bottom: 8px;
+    margin-top: 5px;
     line-height: 17px;
     width: 100px;
     text-align: center;
+  }
+
+  @include desktop {
+    margin-top: 8px;
+    margin-right: 20px;
   }
 }
 
