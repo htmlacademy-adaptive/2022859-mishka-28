@@ -4,11 +4,17 @@
   position: relative;
   padding-bottom: 45px;
 
+  @include desktop {
+    padding-bottom: 64px;
+  }
+}
+
+.reviews__wrapper {
   @include tablet {
     background-image: url("..//..//img/review-bg.jpg");
     background-repeat: no-repeat;
     background-size: 350px 457px;
-    padding-bottom: 116px;
+    padding-bottom: 100px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("..//..//img/review@2x.jpg");
@@ -16,9 +22,6 @@
   }
 
   @include desktop {
-    width: 1150px;
-    margin: auto;
-    padding-bottom: 163px;
     background-position: 50px 2px;
   }
 }
@@ -43,7 +46,7 @@
   @include desktop {
     font-size: 53px;
     line-height: 57px;
-    margin-bottom: 37px;
+    margin-bottom: 33px;
     padding-left: 174px;
   }
 }

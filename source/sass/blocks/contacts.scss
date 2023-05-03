@@ -13,8 +13,6 @@
   }
 
   @include desktop {
-    width: 1150px;
-    margin: auto;
     padding-top: 175px;
     padding-bottom: 105px;
   }
@@ -36,7 +34,7 @@
 
   @include desktop {
     &::before {
-      top: 0;
+      top: -17px;
       left: 113px;
     }
   }
