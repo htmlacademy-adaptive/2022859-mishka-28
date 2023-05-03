@@ -28,4 +28,11 @@
       transform: translateX(5%);
     }
   }
+
+  @media (min-width: 1200px) {
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
