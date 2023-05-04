@@ -3,11 +3,11 @@
   padding-top: 17px;
 
   @include tablet {
-    padding-top: 49px;
+    padding-top: 53px;
   }
 
   @include desktop {
-    padding-top: 96px;
+    padding-top: 100px;
   }
 }
 
@@ -23,6 +23,7 @@
   margin-bottom: 28px;
 
   @include tablet {
+    margin-bottom: 24px;
     font-size: 17px;
     line-height: 30px;
   }

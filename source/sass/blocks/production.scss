@@ -1,7 +1,7 @@
 /* Producion */
 
 .production {
-  padding-bottom: 58px;
+  padding-bottom: 57px;
 
   @include tablet {
     padding-bottom: 63px;
@@ -120,7 +120,7 @@
   font-size: 13px;
   line-height: 24px;
   color: $basic-dark-gray;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 
   @include tablet {
     font-size: 15px;
@@ -142,4 +142,9 @@
   @include desktop {
     width: 230px;
   }
+}
+
+.production__description-wrapper a {
+  line-height: 16px;
+  padding: 16px;
 }

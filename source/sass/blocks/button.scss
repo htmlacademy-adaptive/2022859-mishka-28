@@ -14,6 +14,10 @@
   border: 2px solid $basic-dark-gray;
   cursor: pointer;
 
+  @include tablet {
+    font-size: 17px;
+  }
+
   @media (any-hover: hover) {
     &:hover {
       background-color: $basic-dark-gray;
