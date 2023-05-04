@@ -4,6 +4,10 @@
   position: relative;
   padding-bottom: 45px;
 
+  @include tablet {
+    padding-bottom: 18px;
+  }
+
   @include desktop {
     padding-bottom: 64px;
   }
@@ -46,7 +50,7 @@
   @include desktop {
     font-size: 53px;
     line-height: 57px;
-    margin-bottom: 33px;
+    margin-bottom: 37px;
     padding-left: 174px;
   }
 }
@@ -65,7 +69,7 @@
 .reviews__item {
   display: none;
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 33px;
 
   &--active {
     display: block;
@@ -179,6 +183,6 @@
 
   @include desktop {
     left: 80%;
-    transform: translateY(80px);
+    transform: translate(3%, 83px);
   }
 }
