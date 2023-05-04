@@ -177,7 +177,6 @@
 /* Heading */
 
 .form__group-heading {
-  position: relative;
   display: inline-block;
   font-weight: 700;
   font-size: 17px;
@@ -220,6 +219,7 @@
   }
 
   &--textarea {
+    position: relative;
     margin-bottom: 23px;
 
     @include tablet {
@@ -228,6 +228,7 @@
   }
 
   &--connection {
+    position: relative;
     margin-bottom: 7px;
 
     @include tablet {
@@ -243,6 +244,7 @@
   }
 
   &--email {
+    position: relative;
     margin-bottom: 8px;
 
     &::after {
@@ -262,6 +264,8 @@
   }
 
   &--name {
+    position: relative;
+
     @include tablet {
       width: 33%;
     }
@@ -366,7 +370,7 @@
   }
 
   @include desktop {
-    margin-top: 10px;
+    margin-top: 3px;
   }
 }
 
@@ -520,6 +524,7 @@
   padding: 16px;
   font-size: 17px;
   line-height: 16px;
+  font-family: inherit;
 }
 
 .form__checkbox {
@@ -529,6 +534,12 @@
 
   @include tablet {
     padding-left: 81px;
+  }
+}
+
+.form__checkbox .form__text {
+  @include desktop {
+    padding-top: 5px;
   }
 }
 
