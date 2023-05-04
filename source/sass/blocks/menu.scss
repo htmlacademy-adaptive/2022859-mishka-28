@@ -40,7 +40,7 @@
 
   @include desktop {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: min-content 1fr;
     grid-template-rows: min-content;
     justify-content: start;
     font-size: 17px;
@@ -117,6 +117,7 @@
   &--catalog {
     @include desktop {
       border-right: 1px solid $basic-semi-gray;
+      width: 185px;
     }
   }
 
@@ -127,7 +128,7 @@
 
     @include desktop {
       text-align: center;
-      padding-left: 25px;
+      padding-left: 30px;
     }
   }
 
@@ -150,7 +151,7 @@
   padding: 0;
 
   &--sale {
-    padding-left: 31px;
+    padding-left: 35px;
   }
 }
 

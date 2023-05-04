@@ -67,6 +67,10 @@
       padding-left: 31px;
       padding-right: 0;
     }
+
+    @include desktop {
+      padding-right: 2px;
+    }
   }
 }
 
