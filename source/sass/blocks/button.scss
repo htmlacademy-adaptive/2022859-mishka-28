@@ -3,7 +3,7 @@
 .button {
   display: inline-block;
   font-weight: 700;
-  padding: 16px;
+  padding: 14px;
   font-size: 18px;
   line-height: 20px;
   text-align: center;
@@ -14,6 +14,10 @@
   border: 2px solid $basic-dark-gray;
   cursor: pointer;
 
+  @include tablet {
+    font-size: 17px;
+  }
+
   @media (any-hover: hover) {
     &:hover {
       background-color: $basic-dark-gray;
@@ -22,7 +26,7 @@
   }
 
   &:focus-visible {
-    outline: 2px solid #061bd8;
+    outline: 2px solid $basic-lilac;
   }
 
   &:active {

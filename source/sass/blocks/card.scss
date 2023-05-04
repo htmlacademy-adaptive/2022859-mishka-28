@@ -25,6 +25,12 @@
 
 /* Link */
 
+.card__images-link {
+  &:focus-visible {
+    outline: 2px solid $basic-lilac;
+  }
+}
+
 
 /* Title */
 
@@ -54,6 +60,10 @@
     }
   }
 
+  &:focus-visible {
+    outline: 2px solid $basic-lilac;
+  }
+
   &:active {
     opacity: 0.3;
   }
@@ -73,7 +83,7 @@
     content: "";
     background-color: $basic-semi-gray;
     position: absolute;
-    height: 2px;
+    height: 1px;
     top: 58%;
     transform: translateY(-50%);
     left: 28px;
@@ -84,13 +94,15 @@
     font-size: 15px;
 
     &::after {
-      top: 75%;
+      top: 78%;
     }
   }
 
   @include desktop {
+    margin-bottom: 38px;
+
     &::after {
-      top: 64%;
+      top: 62%;
     }
   }
 }
@@ -104,6 +116,10 @@
 
 .card__link {
   margin-left: auto;
+
+  &:focus-visible {
+    outline: 2px solid $basic-lilac;
+  }
 }
 
 .card__link svg {
@@ -139,13 +155,18 @@
   display: flex;
   flex-direction: column;
   padding: 27px;
+  padding-bottom: 26px;
   border: 1px solid $basic-semi-gray;
 
   @include tablet {
     flex-grow: 1;
-    padding-left: 34px;
+    padding-left: 32px;
     padding-top: 27px;
     padding-right: 32px;
+  }
+
+  @include desktop {
+    padding-left: 27px;
   }
 }
 

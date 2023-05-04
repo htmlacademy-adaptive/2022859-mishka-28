@@ -9,6 +9,8 @@
   display: none;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
 
   &--open {
     display: flex;
@@ -33,7 +35,7 @@
 // Title
 
 .modal__text {
-  padding: 29px 70px 11px 74px;
+  padding: 29px 70px 11px 69px;
 
   @include tablet {
     padding: 38px 92px 10px;
@@ -155,4 +157,14 @@
   color: $basic-white;
   margin-top: 31px;
   cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: $basic-dark-green;
+    }
+  }
+
+  &:active {
+    color: rgb(68, 68, 68, 0.3);
+  }
 }

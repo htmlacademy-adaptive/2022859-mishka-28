@@ -3,7 +3,11 @@
   padding-top: 17px;
 
   @include tablet {
-    padding-top: 98px;
+    padding-top: 53px;
+  }
+
+  @include desktop {
+    padding-top: 100px;
   }
 }
 
@@ -16,8 +20,10 @@
   color: $basic-dark-gray;
   margin: 0;
   max-width: 702px;
+  margin-bottom: 28px;
 
   @include tablet {
+    margin-bottom: 24px;
     font-size: 17px;
     line-height: 30px;
   }

@@ -3,7 +3,15 @@
 .form {
   display: flex;
   flex-direction: column;
-  padding-bottom: 55px;
+  padding-bottom: 54px;
+
+  @include tablet {
+    padding-bottom: 50px;
+  }
+
+  @include desktop {
+    padding-bottom: 48px;
+  }
 }
 
 .form-main__wrapper {
@@ -19,14 +27,14 @@
   margin: 0;
   padding: 0;
   border: none;
-  margin-top: 30px;
+  margin-top: 33px;
 
   &:last-of-type {
     margin-bottom: 0;
   }
 
   @include tablet {
-    padding-top: 62px;
+    padding-top: 38px;
     padding-bottom: 50px;
 
     &--radiobox {
@@ -34,17 +42,27 @@
       margin-top: 0;
     }
   }
+
+  @include desktop {
+    &--radiobox {
+      padding-top: 45px;
+    }
+  }
+
+  &--type {
+    margin-top: 0;
+  }
 }
 
 .form__group-wrapper {
   @include desktop {
     padding: 0 97px;
   }
+}
 
-  &--gray {
-    @include tablet {
-      background-color: #f1f1f1;
-    }
+.form__group-wrapper-gray {
+  @include tablet {
+    background-color: #f1f1f1;
   }
 }
 
@@ -52,7 +70,7 @@
 .form__field-group {
   display: flex;
   flex-direction: column;
-  padding-top: 33px;
+  padding-top: 35px;
 
   @include tablet {
     padding-top: 66px;
@@ -61,7 +79,7 @@
     justify-content: space-between;
 
     &--wrapper {
-      padding-top: 50px;
+      padding-top: 45px;
     }
   }
 
@@ -71,6 +89,16 @@
 
   &--textarea {
     margin-bottom: 0;
+
+    @include tablet {
+      padding-top: 48px;
+      padding-bottom: 52px;
+    }
+
+    @include desktop {
+      padding-bottom: 40px;
+      padding-top: 49px;
+    }
   }
 }
 
@@ -88,7 +116,7 @@
 
 .form__input-icon {
   position: absolute;
-  right: 0;
+  right: 6px;
   bottom: 17px;
   opacity: 0.2;
   color: $basic-black;
@@ -101,6 +129,18 @@
     right: 8px;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  &--mail {
+    @include tablet {
+      right: 22px;
+      top: 20px;
+    }
+
+    @include desktop {
+      top: 31px;
+      right: 2px;
+    }
   }
 }
 
@@ -116,14 +156,20 @@
 
   @include desktop {
     width: 698px;
+    row-gap: 18px;
   }
 
   &--mail {
     width: 100%;
-    row-gap: 35px;
+    row-gap: 31px;
+
+    @include tablet {
+      row-gap: 22px;
+    }
 
     @include desktop {
       width: 826px;
+      row-gap: 20px;
     }
   }
 }
@@ -131,7 +177,6 @@
 /* Heading */
 
 .form__group-heading {
-  position: relative;
   display: inline-block;
   font-weight: 700;
   font-size: 17px;
@@ -141,14 +186,13 @@
   margin: 0;
   padding: 0;
   margin-bottom: 30px;
-  width: 100%;
 
-  &::before {
+  &::after {
     content: "";
     display: block;
     position: absolute;
     top: 8px;
-    height: 2px;
+    height: 1px;
     width: 77%;
     left: 62px;
     background-color: $basic-green;
@@ -157,16 +201,79 @@
   @include tablet {
     float: left;
     margin-bottom: 0;
-    width: 17%;
-    padding-top: 18px;
+    padding-top: 20px;
+    width: 25%;
 
-    &::before {
+    &::after {
       display: none;
     }
   }
 
-  @include tablet {
-    width: 14%;
+  @include desktop {
+    width: 12%;
+    margin-left: 15px;
+  }
+
+  &--color {
+    margin-bottom: 20px;
+  }
+
+  &--textarea {
+    position: relative;
+    margin-bottom: 23px;
+
+    @include tablet {
+      padding-top: 20px;
+    }
+  }
+
+  &--connection {
+    position: relative;
+    margin-bottom: 7px;
+
+    @include tablet {
+      padding-top: 2px;
+      margin-bottom: 0;
+    }
+
+    @include desktop {
+      width: 14%;
+      margin-bottom: 15px;
+      padding-top: 15px;
+    }
+  }
+
+  &--email {
+    position: relative;
+    margin-bottom: 8px;
+
+    &::after {
+      content: "";
+      width: 70%;
+      left: 79px;
+      top: 10px;
+    }
+
+    @include tablet {
+      padding-top: 7px;
+    }
+
+    @include desktop {
+      width: 14%;
+    }
+  }
+
+  &--name {
+    position: relative;
+
+    @include tablet {
+      width: 33%;
+    }
+
+    @include desktop {
+      padding-top: 26px;
+      width: 12%;
+    }
   }
 }
 
@@ -176,7 +283,7 @@
   @include overlay;
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 12px;
+  row-gap: 10px;
   font-size: 17px;
 
   @include tablet {
@@ -184,12 +291,17 @@
   }
 
   &--checkbox {
+    row-gap: 19px;
+
     @include tablet {
+      row-gap: 25px;
+      column-gap: 22px;
       grid-template-columns: 1fr 1fr;
     }
 
     @include desktop {
-      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 98px;
+      grid-template-columns: min-content min-content 1fr;
     }
   }
 }
@@ -218,13 +330,13 @@
   color: inherit;
 
   @include tablet {
-    font-size: 18px;
+    font-size: 19px;
   }
 }
 
 .form__legend {
   margin: 0;
-  margin-top: 17px;
+  margin-top: 10px;
   color: $basic-dark-gray;
 
   @include tablet {
@@ -256,17 +368,22 @@
     padding-right: 25px;
     font-size: 19px;
   }
+
+  @include desktop {
+    margin-top: 3px;
+  }
 }
 
 
 /* Input */
 
 .form__input {
+  font-family: inherit;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
   color: $basic-dark-gray;
-  padding-bottom: 17px;
+  padding-bottom: 15px;
   padding-top: 16px;
   padding-right: 10px;
   border: none;
@@ -275,16 +392,25 @@
 
   @include tablet {
     font-size: 19px;
-    padding: 16px 127px 16px 18px;
+    padding: 16px 127px 11px 18px;
+  }
+
+  @include desktop {
+    padding-top: 18px;
+    padding-bottom: 13px;
   }
 
   &--phone {
     @include tablet {
       background-color: #f1f1f1;
+      padding-bottom: 13px;
     }
 
     @include desktop {
       width: 700px;
+      padding-top: 15px;
+      padding-bottom: 13px;
+      padding-left: 15px;
     }
   }
 
@@ -295,6 +421,7 @@
 
     @include desktop {
       width: 700px;
+      padding-top: 15px;
     }
   }
 
@@ -305,7 +432,7 @@
   }
 
   &:focus-visible {
-    outline: 2px solid $basic-green;
+    outline: 2px solid $basic-lilac;
   }
 
 
@@ -326,6 +453,7 @@
 
 
 .form__textarea {
+  font-family: inherit;
   resize: none;
   padding: 17px;
   border: 2px solid $basic-dark-gray;
@@ -352,11 +480,15 @@
 
   &:focus-visible {
     outline: none;
-    border-color: $basic-green;
+    border-color: $basic-lilac;
   }
 
   &:not(:placeholder-shown) {
     border-color: $basic-green;
+  }
+
+  &::placeholder {
+    opacity: 0.3;
   }
 }
 
@@ -379,7 +511,7 @@
 }
 
 .form__button {
-  margin-top: 30px;
+  margin-top: 28px;
   width: 100%;
 
   @include tablet {
@@ -388,18 +520,34 @@
   }
 }
 
+.form__info-wrapper button {
+  padding: 16px;
+  font-size: 17px;
+  line-height: 16px;
+  font-family: inherit;
+}
+
 .form__checkbox {
   display: flex;
   align-items: center;
   padding-left: 61px;
+
+  @include tablet {
+    padding-left: 81px;
+  }
+}
+
+.form__checkbox .form__text {
+  @include desktop {
+    padding-top: 5px;
+  }
 }
 
 .form__checkbox-input {
   &--control {
     position: absolute;
-    width: 42px;
-    height: 42px;
     left: 1px;
+    top: 4px;
     border: 2px solid $basic-black;
     cursor: pointer;
     background-color: $basic-white;
@@ -422,11 +570,23 @@
   }
 
   &:disabled + span {
-    border-color: rgba(150, 149, 149);
+    border-color: rgb(155, 155, 155);
   }
 
   &:focus-visible + span {
-    border-color: $basic-green;
+    border-color: $basic-lilac;
+  }
+}
+
+.form__checkbox-input + .form__checkbox-input--control {
+  width: 38px;
+  height: 38px;
+
+  @include tablet {
+    width: 52px;
+    height: 52px;
+    top: 1px;
+    left: -1px;
   }
 }
 
@@ -440,25 +600,46 @@
   }
 }
 
+.form__checkbox-input:disabled + .form__checkbox-input--control {
+  background-color: #e3e3e3;
+}
+
+.form__checkbox-input:checked:disabled + .form__checkbox-input--control {
+  background-image: url("..//..//img/tick-disabled.svg");
+}
+
 .form__radiobox {
   display: flex;
   align-items: center;
   padding-left: 60px;
+
+  @include tablet {
+    padding-left: 81px;
+  }
 }
 
 .form__radiobox-input {
   &--control {
     position: absolute;
-    width: 42px;
-    height: 42px;
+    width: 39px;
+    height: 39px;
     left: 1px;
+    top: 2px;
     border: 2px solid $basic-black;
     border-radius: 50%;
     cursor: pointer;
 
     @include tablet {
       width: 52px;
-      height: 52px;
+      height: 50px;
+      top: 3px;
+      left: 2px;
+    }
+
+    @include desktop {
+      top: 3px;
+      left: -2px;
+      height: 48px;
     }
 
     @media (any-hover: hover) {
@@ -473,11 +654,11 @@
   }
 
   &:disabled + span {
-    border-color: rgba(150, 149, 149);
+    border-color: #9b9b9b;
   }
 
   &:focus-visible + span {
-    border-color: $basic-green;
+    border-color: $basic-lilac;
   }
 }
 
@@ -496,4 +677,8 @@
     width: 22px;
     height: 22px;
   }
+}
+
+.form__radiobox-input:checked:disabled + .form__radiobox-input--control::before {
+  background-color: #ebebeb;
 }

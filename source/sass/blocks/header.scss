@@ -56,13 +56,18 @@
 
 .header__menu--nojs .menu__list {
   @include tablet {
-    flex-direction: row;
+    display: grid;
   }
 }
 
 .header__menu--nojs .user__list {
   @include tablet {
+    display: flex;
     flex-direction: row;
+  }
+
+  @include desktop {
+    display: grid;
   }
 }
 
@@ -115,7 +120,7 @@
   }
 
   &:focus-visible {
-    outline: 2px solid #3f3dbc;
+    outline: 2px solid $basic-lilac;
   }
 
   &:active {
@@ -141,7 +146,7 @@
 /* Title */
 
 .header__title-wrapper {
-  padding: 77px 30px;
+  padding: 74px 30px;
   background-color: #f9f9f9;
 
   @include tablet {
@@ -166,8 +171,8 @@
     @include tablet {
       background-image: url("..//..//img/hero-tablet.jpg");
       padding-bottom: 372px;
-      padding-top: 108px;
-      background-position: top;
+      padding-top: 110px;
+      background-position: center -45px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("..//..//img/hero-tablet@2x.png");
@@ -178,9 +183,9 @@
     @include desktop {
       background-image: url("..//..//img/hero-desktop.jpg");
       background-size: cover;
-      padding-top: 94px;
-      padding-bottom: 359px;
-      background-position: 50% -60px;
+      padding-top: 114px;
+      padding-bottom: 355px;
+      background-position: 50% -44px;
 
       @media (min-resolution: 2dppx) {
         background-image: url("..//..//img/hero-desktop@2x.jpg");
@@ -210,7 +215,18 @@
 
   @include desktop {
     padding-bottom: 118px;
-    background-size: auto 34px;
+    background-size: 1150px 34px;
+  }
+
+  &--inner {
+    @include tablet {
+      padding-top: 56px;
+      padding-bottom: 88px;
+    }
+
+    @include desktop {
+      padding-bottom: 114px;
+    }
   }
 }
 

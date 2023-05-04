@@ -5,7 +5,12 @@
   padding-bottom: 30px;
 
   @include tablet {
+    padding-top: 66px;
     padding-bottom: 51px;
+  }
+
+  @include desktop {
+    padding-top: 112px;
   }
 }
 

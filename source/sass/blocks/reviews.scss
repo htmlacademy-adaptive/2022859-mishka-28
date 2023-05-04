@@ -5,10 +5,20 @@
   padding-bottom: 45px;
 
   @include tablet {
+    padding-bottom: 18px;
+  }
+
+  @include desktop {
+    padding-bottom: 64px;
+  }
+}
+
+.reviews__wrapper {
+  @include tablet {
     background-image: url("..//..//img/review-bg.jpg");
     background-repeat: no-repeat;
     background-size: 350px 457px;
-    padding-bottom: 116px;
+    padding-bottom: 100px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("..//..//img/review@2x.jpg");
@@ -16,7 +26,6 @@
   }
 
   @include desktop {
-    padding-bottom: 163px;
     background-position: 50px 2px;
   }
 }
@@ -35,13 +44,13 @@
     font-size: 43px;
     line-height: 50px;
     margin-bottom: 39px;
-    padding-top: 83px;
+    padding-top: 81px;
   }
 
   @include desktop {
     font-size: 53px;
     line-height: 57px;
-    margin-bottom: 35px;
+    margin-bottom: 37px;
     padding-left: 174px;
   }
 }
@@ -60,7 +69,7 @@
 .reviews__item {
   display: none;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 33px;
 
   &--active {
     display: block;
@@ -75,7 +84,7 @@
 
 .reviews__text {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 33px;
   font-weight: 400;
   font-size: 15px;
   line-height: 30px;
@@ -94,6 +103,7 @@
 
 .reviews__author-name {
   font-weight: 700;
+  font-style: normal;
   font-size: 17px;
   line-height: 24px;
   color: $basic-black;
@@ -101,9 +111,15 @@
   @include tablet {
     font-size: 18px;
   }
+
+  @include desktop {
+    font-size: 17px;
+  }
 }
 
 .reviews__author-name--link {
+  font-weight: 400;
+  line-height: 30px;
   color: $basic-dark-gray;
 }
 
@@ -111,29 +127,30 @@
 
 .reviews__button-wrapper {
   display: flex;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
 
   @include tablet {
-    width: 137px;
+    width: 185px;
     position: absolute;
-    left: 75%;
-    transform: translateY(-35px);
+    left: 70%;
+    transform: translateY(-37px);
     margin-bottom: 0;
   }
 
   @include desktop {
-    left: 82%;
+    left: 80%;
   }
 }
 
 .reviews__button {
   width: 50%;
-  padding: 13px 30px;
+  padding: 13px 30px 8px;
   background-color: transparent;
   border: 1px solid $basic-semi-gray;
   cursor: pointer;
 
   @include tablet {
+    width: 50%;
     padding: 0;
     border: none;
   }
@@ -142,6 +159,10 @@
     &:hover {
       opacity: 0.6;
     }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $basic-lilac;
   }
 
   &:active {
@@ -154,13 +175,14 @@
 
   @include tablet {
     position: absolute;
-    width: 230px;
+    width: 175px;
     top: 0;
-    transform: translateY(83px);
-    left: 63%;
+    transform: translate(-1%, 77px);
+    left: 71%;
   }
 
   @include desktop {
-    left: 75%;
+    left: 80%;
+    transform: translate(3%, 83px);
   }
 }

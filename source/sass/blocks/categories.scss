@@ -12,7 +12,7 @@
       content: "";
       position: absolute;
       display: block;
-      top: 87%;
+      top: 90%;
       width: 100%;
       height: 24px;
       background-image: url("..//..//img/zigzag-fill.svg");
@@ -79,7 +79,7 @@
   }
 
   @include desktop {
-    padding: 25px 350px 34px 36px;
+    padding: 25px 180px 38px 36px;
   }
 
   &::after {
@@ -88,26 +88,8 @@
     position: absolute;
   }
 
-  &--interior {
-    &::after {
-      background-image: url("..//..//img/interior.svg");
-      width: 40px;
-      height: 62px;
-      right: 36px;
-      top: 24px;
-    }
-  }
-
   &--toy {
     background-color: $basic-dark-green;
-
-    &::after {
-      background-image: url("..//..//img/toy.svg");
-      width: 60px;
-      height: 60px;
-      top: 20px;
-      right: 28px;
-    }
   }
 
   @media (any-hover: hover) {
@@ -115,9 +97,38 @@
       transform: translateY(-5px);
       transition: transform 0.25s ease-in-out;
     }
+  }
 
-    &:active {
-      transform: translateY(-5px);
-    }
+  &:focus-visible {
+    outline: 2px solid #9873d3;
+  }
+
+  &:active {
+    transform: translateY(-5px);
+  }
+}
+
+.categories__link--interior::after {
+  background-image: url("..//..//img/interior.svg");
+  width: 40px;
+  height: 62px;
+  right: 36px;
+  top: 24px;
+
+  @include tablet {
+    top: 30px;
+  }
+}
+
+.categories__link--toy::after {
+  background-image: url("..//..//img/toy.svg");
+  width: 60px;
+  height: 60px;
+  top: 20px;
+  right: 28px;
+
+  @include tablet {
+    top: 32px;
+    right: 33px;
   }
 }

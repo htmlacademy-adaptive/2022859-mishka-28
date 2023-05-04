@@ -6,17 +6,19 @@
   justify-content: space-between;
   min-height: 40px;
   padding: 20px 43px 23px 39px;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 18px;
 
   @include tablet {
     padding: 0;
     width: 180px;
   }
-}
 
-.copyright__text {
-  font-weight: 700;
-  font-size: 19px;
-  line-height: 18px;
+  @include desktop {
+    width: 184px;
+    align-items: baseline;
+  }
 }
 
 // Link
@@ -24,21 +26,29 @@
 .copyright__link {
   display: flex;
   text-decoration: none;
+  align-items: center;
   color: $basic-black;
+  cursor: pointer;
+
+  @media (any-hover: hover) {
+    &:hover .copyright__link-icon {
+      color: #46c1ae;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $basic-lilac;
+  }
+
+  &:active .copyright__link-icon {
+    opacity: 0.3;
+  }
 }
 
 // Icon
 
 .copyright__link-icon {
   color: $basic-green;
-  width: 27px;
-  height: 35px;
-
-  &:hover {
-    color: #46c1ae;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
+  width: 82px;
+  height: 39px;
 }
