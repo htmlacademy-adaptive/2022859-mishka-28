@@ -35,7 +35,7 @@
 
   @include tablet {
     padding-top: 38px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
 
     &--radiobox {
       padding-top: 50px;
@@ -287,19 +287,21 @@
   font-size: 17px;
 
   @include tablet {
-    row-gap: 24px;
+    row-gap: 34px;
   }
+
 
   &--checkbox {
     row-gap: 19px;
 
     @include tablet {
-      row-gap: 25px;
+      row-gap: 35px;
       column-gap: 22px;
       grid-template-columns: 1fr 1fr;
     }
 
     @include desktop {
+      row-gap: 35px;
       column-gap: 98px;
       grid-template-columns: min-content min-content 1fr;
     }
@@ -314,10 +316,6 @@
   display: flex;
   color: $basic-black;
   min-height: 42px;
-
-  @include tablet {
-    height: 52px;
-  }
 }
 
 
@@ -331,6 +329,11 @@
 
   @include tablet {
     font-size: 19px;
+    padding-top: 12px;
+  }
+
+  @include desktop {
+    padding-top: 10px;
   }
 }
 
@@ -533,13 +536,18 @@
   padding-left: 61px;
 
   @include tablet {
+    align-items: flex-start;
     padding-left: 81px;
   }
 }
 
 .form__checkbox .form__text {
+  @include tablet {
+    padding-top: 15px;
+  }
+
   @include desktop {
-    padding-top: 5px;
+    padding-top: 20px;
   }
 }
 
